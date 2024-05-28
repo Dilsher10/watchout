@@ -12,9 +12,9 @@ const PORT = process.env.PORT;
 app.use(express.json());
 
 
-app.use('/auth', userRouter);
-app.use('/auth', adminRouter);
-app.use('/auth', postRouter);
+app.use('/api/auth', userRouter);
+app.use('/api/auth', adminRouter);
+app.use('/api/auth', postRouter);
 
 
 
