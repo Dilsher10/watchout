@@ -1,0 +1,570 @@
+/********** Template CSS **********/
+:root {
+    --primary: #009CFF;
+    --light: #F3F6F9;
+    --dark: #191C24;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+}
+
+.btn.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+
+/*** Layout ***/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--light);
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.content {
+    margin-left: 280px;
+    min-height: 100vh;
+    background: #FFFFFF;
+    transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        margin-left: 0;
+    }
+
+    .sidebar.open {
+        margin-left: -250px;
+    }
+
+    .content {
+        width: calc(100% - 250px);
+    }
+
+    .content.open {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+
+    .sidebar.open {
+        margin-left: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+/*** Navbar ***/
+
+.sidebar {
+    background-color: #252645;
+}
+
+#adminNavbar .navbar {
+    background-color: #252645 !important;
+    padding: 10px 0 !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 0 30px 30px 0;
+    outline: none;
+    text-align: left;
+    font-size: 17px;
+    margin: 8px 0px !important;
+    width: 100%;
+    padding: 7px 5px !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link span {
+    position: relative;
+    bottom: 4px;
+    left: 5px;
+    font-weight: 600;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link.active {
+    color: #252645 !important;
+    background: #FFFFFF !important;
+    border-color: #252645 !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover .iconBox,
+.sidebar .navbar .navbar-nav .nav-link.active .iconBox {
+    background-color: #252645 !important;
+    color: #FFFFFF !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover .sidebarIcon,
+.sidebar .navbar .navbar-nav .nav-link.active .sidebarIcon {
+    color: #FFFFFF !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link .iconBox {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 40px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link .iconBox .sidebarIcon {
+    color: #252645;
+    width: 17px;
+}
+
+.bars {
+    color: #252645;
+    width: 20px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover i,
+.sidebar .navbar .navbar-nav .nav-link.active i {
+    background: var(--light);
+}
+
+.sidebar .navbar .dropdown-toggle::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: .5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+    padding-left: 25px;
+    border-radius: 0 30px 30px 0;
+}
+
+.content .navbar .navbar-nav .nav-link {
+    margin-left: 25px;
+    padding: 12px 0;
+    color: var(--dark);
+    outline: none;
+    font-weight: bold;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+    background-color: #fff !important;
+    color: #252645 !important;
+}
+
+.content .navbar .sidebar-toggler,
+.content .navbar .navbar-nav .nav-link i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 40px;
+}
+
+.content .navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 575.98px) {
+    .content .navbar .navbar-nav .nav-link {
+        margin-left: 15px;
+    }
+}
+
+
+/*** Date Picker ***/
+
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+
+.progress .progress-bar {
+    width: 0px;
+    transition: 2s;
+}
+
+
+/*** Testimonial ***/
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 5px solid var(--primary);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--dark);
+    border-color: var(--primary);
+}
+
+.adminSec-1 .img-fluid {
+    width: 35%;
+}
+
+.sidebar .title {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 28px;
+}
+
+
+/* Login */
+
+.loginSec {
+    background-color: #252645;
+}
+
+.loginSec .row {
+    min-height: 100vh;
+}
+
+.loginSec h3 {
+    color: #252645 !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.loginSec .login-btn {
+    background-color: #252645;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+/* Signup */
+
+.signForm .row {
+    min-height: 100vh;
+}
+
+.signForm h3 {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.detail-btn {
+    background-color: #252645;
+    color: #fff;
+    width: 100%;
+    border: 1px solid #252645;
+}
+
+.detail-btn:hover {
+    border: 1px solid #252645;
+    color: #252645;
+}
+
+.dropdown-menu {
+    margin-top: 3px !important;
+    width: 80% !important;
+    background-color: #252645 !important;
+}
+
+.adminNavbar .dropdown-menu {
+    right: 0 !important;
+}
+
+.dropdown-item {
+    color: #FFFFFF;
+}
+
+.dropdown-item:hover {
+    color: #252645;
+    background-color: #FFFFFF;
+}
+
+
+.sidebar .navbar .navbar-nav .nav-link[aria-current="page"] {
+    color: #252645 !important;
+    background: #FFFFFF !important;
+    border-color: #252645 !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+
+.sidebar .navbar .navbar-nav .nav-link[aria-current="page"] .iconBox {
+    background-color: #252645 !important;
+    color: #FFFFFF !important;
+}
+
+.sidebar .navbar .navbar-nav .nav-link[aria-current="page"] .sidebarIcon {
+    color: #FFFFFF !important;
+}
+
+.alertForm label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.alertForm .col-6 {
+    margin-bottom: 20px;
+}
+
+
+.wrapper {
+    cursor: help;
+    font-size: 18px;
+    padding: 15px 20px;
+    position: relative;
+    text-align: center;
+    width: 150px;
+}
+
+.wrapper .tooltip {
+    background: #252645;
+    bottom: 100%;
+    color: #fff;
+    display: block;
+    left: -20px;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 20px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.wrapper .tooltip:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.wrapper .tooltip:after {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid #252645 10px;
+    bottom: -10px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+
+.wrapper:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.lte8 .wrapper .tooltip {
+    display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+    display: block;
+}
+
+
+.eye-btn {
+    text-align: center;
+    margin: 5px auto;
+    display: block;
+}
+
+.eye-btn svg {
+    font-size: 25px;
+    color: #252645;
+}
+
+#adminNavbar .title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 40px !important;
+    text-transform: uppercase;
+}
+
+#pills-tab .nav-item .nav-link {
+    color: #000 !important;
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid #252645;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+#pills-tab .nav-item .nav-link.active {
+    background-color: #252645 !important;
+    color: #fff !important;
+}
+
+
+
+
+.otp-field {
+    display: flex;
+}
+
+.otp-field input {
+    width: 100%;
+    font-size: 30px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    border: 2px solid rgb(241 245 249);;
+    background: #fff;
+    font-weight: bold;
+    color: #21232d;
+    outline: none;
+    transition: all 0.1s;
+}
+
+.otp-field input:focus {
+    box-shadow: 0 0 2px 2px rgb(241 245 249);
+    background-color: #fff !important;
+}
+
+
+
+
+
+.toggleIcon {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    font-size: 24px;
+}

@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
+import './admin.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
