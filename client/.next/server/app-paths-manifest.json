@@ -1,0 +1,5 @@
+{
+  "/user_dashboard/page": "app/user_dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/user_dashboard/login/page": "app/user_dashboard/login/page.js"
+}
