@@ -7,6 +7,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 
+
 const Page = () => {
 
     // On Change
@@ -114,7 +115,17 @@ const Page = () => {
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Dating Period</label>
-                                                <input type="text" className="form-control" placeholder='Enter dating period' onChange={(e) => setDating(e.target.value)} />
+                                                <select className="form-select" onChange={(e) => setDating(e.target.value)}>
+                                                    <option selected>Select dating period</option>
+                                                    <option value="1 Month">1 Month</option>
+                                                    <option value="3 Months">3 Months</option>
+                                                    <option value="5 Months">5 Months</option>
+                                                    <option value="More than 1 Year">More than 1 Year</option>
+                                                    <option value="More than 2 Years">More than 2 Years</option>
+                                                    <option value="More than 3 Years">More than 3 Years</option>
+                                                    <option value="More than 4 Years">More than 4 Years</option>
+                                                    <option value="More than 5 Years">More than 5 Years</option>
+                                                </select>
                                             </div>
                                             <div className="col-12 my-3">
                                                 <div className="form-check form-check-inline wrapper">

@@ -49,7 +49,7 @@ const Page = () => {
                                                     <td>{item?.phone}</td>
                                                     <td>{`${item?.city}, ${item?.state}, ${item?.country}`}</td>
                                                     <td>
-                                                        <Link href={`/view-details/${item?._id}`} className="eye-btn">
+                                                        <Link href="/#slider" className="eye-btn">
                                                             <FaEye />
                                                         </Link>
                                                     </td>

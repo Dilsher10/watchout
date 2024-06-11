@@ -1,5 +1,5 @@
 "use client";
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import BlogSlider from "../../components/BlogSlider";
 import Slider from "../../components/Slider";
 import TestimonialSlider from "../../components/TestimonialSlider";
@@ -9,18 +9,35 @@ import Navbar from '../../components/Navbar';
 import Topbar from '../../components/Topbar';
 import Footer from '../../components/Footer';
 import Link from "next/link";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 
 export default function Home() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const [hoveredCountry, setHoveredCountry] = useState(null);
+
+  const handleMouseEnter = (country) => {
+    setHoveredCountry(country);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCountry(null);
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       offset: 200,
     });
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
+
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+
   }, []);
-
-
-  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
 
 
   return (
@@ -93,8 +110,17 @@ export default function Home() {
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h1>Simple & Quick Alert System! </h1>
               <p>Submitting or viewing alerts has never been easier. Our user-friendly interface ensures a smooth experience, allowing you to swiftly submit any concerns or browse through alerts with just a few clicks. Whether you're reporting suspicious activity or staying updated on potential risks, our system streamlines the process, keeping you informed and vigilant. Stay ahead of the curve and maintain your safety effortlessly with our intuitive alert system.</p>
-              <Link href="/user_dashboard/login" className='btn-2'>Submit Alert</Link>
-              <Link href="/user_dashboard/login" className='btn-1'>View Alerts</Link>
+              {isAuthenticated ? (
+                <>
+                  <Link href="/user_dashboard" className='btn-2'>Submit Alert</Link>
+                  <Link href="/user_dashboard" className='btn-1'>View Alerts</Link>
+                </>
+              ) : (
+                <>
+                  <Link href="/user_dashboard/login" className='btn-2'>Submit Alert</Link>
+                  <Link href="/user_dashboard/login" className='btn-1'>View Alerts</Link>
+                </>
+              )}
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
               <img src="/group-img.png" alt="" className='img-fluid' />
@@ -153,8 +179,7 @@ export default function Home() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
-
-              {token ? (
+              {isAuthenticated ? (
                 <Link href="/user_dashboard">
                   <img src="/home-2.png" className="img-fluid" id="multiImg" alt="" />
                 </Link>
@@ -163,7 +188,6 @@ export default function Home() {
                   <img src="/home-2.png" className="img-fluid" id="multiImg" alt="" />
                 </Link>
               )}
-
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
               <div className="card">
@@ -213,21 +237,106 @@ export default function Home() {
         <div className="container mt-5" data-aos="fade-up">
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
-              <h2>Australia</h2>
-              <img src="/line.png" className='img-fluid' id="line" alt="" />
-              <div className='div-1'>
-                <h3>Alerts</h3>
-                <img src="/vertical-line.png" className='img-fluid' alt="" />
-                <h3>4K+</h3>
+              {hoveredCountry === null ? (
+                <div className="defaultDiv">
+                  <h2>United States</h2>
+                  <img src="/line.png" className="img-fluid" id="line" alt="" />
+                  <div className="div-1">
+                    <h3>Alerts</h3>
+                    <img src="/vertical-line.png" className="img-fluid" alt="" />
+                    <h3>4K+</h3>
+                  </div>
+                  <p className="text-2">
+                    Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  </p>
+                </div>
+              ) : null}
+              <div className={`australia ${hoveredCountry === 'Australia' ? 'showAus' : ''}`}>
+                <h2>Australia</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>4K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                </p>
               </div>
-              <p className='text-2'>Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently. By accepting these signals as trusted companions, individuals gain the power of knowledge, enabling them to make wise choices while safeguarding their emotional wellness</p>
+              <div className={`united-states ${hoveredCountry === 'United States' ? 'showUs' : ''}`}>
+                <h2>United States</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>4K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                </p>
+              </div>
+              <div className={`canada ${hoveredCountry === 'Canada' ? 'showCan' : ''}`}>
+                <h2>Canada</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>4K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                </p>
+              </div>
+              <div className={`russia ${hoveredCountry === 'Russia' ? 'showRus' : ''}`}>
+                <h2>Russia</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>4K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                </p>
+              </div>
+              <div className={`united-kingdom ${hoveredCountry === 'United Kingdom' ? 'showUk' : ''}`}>
+                <h2>United Kingdom</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>4K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                </p>
+              </div>
+              <div className={`south-africa ${hoveredCountry === 'South Africa' ? 'showSa' : ''}`}>
+                <h2>South Africa</h2>
+                <img src="/line.png" className="img-fluid" id="line" alt="" />
+                <div className="div-1">
+                  <h3>Alerts</h3>
+                  <img src="/vertical-line.png" className="img-fluid" alt="" />
+                  <h3>2K+</h3>
+                </div>
+                <p className="text-2">
+                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections.
+                </p>
+              </div>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
-              <img src="/map.png" className='img-fluid' alt="" />
+              <div className="map mt-4">
+                <FaMapMarkerAlt className="marker aus" onMouseEnter={() => handleMouseEnter('Australia')} onMouseLeave={handleMouseLeave} />
+                <FaMapMarkerAlt className="marker us" onMouseEnter={() => handleMouseEnter('United States')} onMouseLeave={handleMouseLeave} />
+                <FaMapMarkerAlt className="marker can" onMouseEnter={() => handleMouseEnter('Canada')} onMouseLeave={handleMouseLeave} />
+                <FaMapMarkerAlt className="marker rus" onMouseEnter={() => handleMouseEnter('Russia')} onMouseLeave={handleMouseLeave} />
+                <FaMapMarkerAlt className="marker uk" onMouseEnter={() => handleMouseEnter('United Kingdom')} onMouseLeave={handleMouseLeave} />
+                <img src="/map.png" className="img-fluid" alt="" />
+                <FaMapMarkerAlt className="marker sa" onMouseEnter={() => handleMouseEnter('South Africa')} onMouseLeave={handleMouseLeave} />
+              </div>
             </div>
           </div>
         </div>
-
 
         <div className="container formSec" data-aos="fade-up">
           <div className="row">

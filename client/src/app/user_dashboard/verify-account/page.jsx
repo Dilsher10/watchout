@@ -95,7 +95,7 @@ const Page = () => {
                         <form onSubmit={handleSubmit}>
                             <div className="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                                 <div className="mb-3">
-                                    <h3>Reset Password</h3>
+                                    <h3>Verify Account</h3>
                                 </div>
 
                                 <div className="mb-3">
@@ -112,7 +112,7 @@ const Page = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <button type="submit" className="btn login-btn mt-4">Reset</button>
+                                <button type="submit" className="btn login-btn mt-4">Submit OTP</button>
                             </div>
                         </form>
                     </div>

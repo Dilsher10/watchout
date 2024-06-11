@@ -42,16 +42,13 @@ const postSchema = new mongoose.Schema({
         required: true,
     },
     toxic: {
-        type: String,
-        required: true,
+        type: String
     },
     cheat: {
-        type: String,
-        required: true,
+        type: String
     },
     scam: {
-        type: String,
-        required: true,
+        type: String
     },
     ethnicity: {
         type: String,

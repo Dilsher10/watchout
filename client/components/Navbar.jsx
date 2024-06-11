@@ -1,14 +1,21 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 const Navbar = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     useEffect(() => {
         document.querySelectorAll('.nav-link').forEach(link => {
             if (link.href === window.location.href) {
                 link.setAttribute('aria-current', 'page');
             }
         })
+
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsAuthenticated(true);
+        }
+
     }, []);
     return (
         <section className='navBar sticky-top'>
@@ -53,8 +60,14 @@ const Navbar = () => {
                                 </li>
                             </ul>
                             <form className="d-flex">
-                                <Link href="/user_dashboard/login" className="btn btn-outline-success" id='btn-1'>Login</Link>
-                                <button type='button' className='btn btn-outline-success' id='btn-2' data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                                {isAuthenticated ? (
+                                    <Link href="/user_dashboard/" className="btn btn-outline-success" id='btn-1'>My Account</Link>
+                                ) : (
+                                    <>
+                                        <Link href="/user_dashboard/login" className="btn btn-outline-success" id='btn-1'>Login</Link>
+                                        <button type='button' className='btn btn-outline-success' id='btn-2' data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                                    </>
+                                )}
                             </form>
                         </div>
                     </div>
