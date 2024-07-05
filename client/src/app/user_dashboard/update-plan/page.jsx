@@ -26,6 +26,7 @@ const Page = () => {
                             <div className="col-sm-12 col-xl-12">
                                 <div className="bg-light rounded h-100 p-5">
                                     <section class="pricing-section">
+                                        <h1>Membership Plans</h1>
                                         <div class="pricing-cards">
                                             {
                                                 planData.map((item) => (
