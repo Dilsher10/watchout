@@ -576,8 +576,9 @@
 
 .pricing-section {
     text-align: center;
+    padding: 50px 20px;
     background-color: #f9f9f9;
-    max-width: 620px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -599,11 +600,11 @@
 .pricing-cards {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 20px;
 }
 
 .pricing-card {
-    background: linear-gradient(135deg, #252645, #252645);
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -616,24 +617,22 @@
 .pricing-card h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #111;
+    font-weight: 600;
 }
 
 .pricing-card .price {
-    font-size: 48px;
+    font-size: 20px;
     margin-bottom: 20px;
-    color: #fff;
-}
-
-.pricing-card .price .currency {
-    font-size: 24px;
-    vertical-align: super;
+    color: #111;
+    font-weight: 500;
+    font-family:serif;
 }
 
 .pricing-card p {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #555;
 }
 
 .pricing-card .btn {
