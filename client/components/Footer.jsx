@@ -43,7 +43,7 @@ const Footer = () => {
             toast.error("Something went wrong");
         }
     };
-    
+
 
 
     return (
@@ -60,7 +60,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Journeys of Heartbreak: Stories Shared on Watch Out</p>
+                                            <p className="card-text">Journeys of Heartbreak: Stories Shared on Watchout</p>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Peeling Back the Layers: Exploring Watch Out's Alert Narratives</p>
+                                            <p className="card-text">Peeling Back the Layers: Exploring Watchout's Alert Narratives</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">From Deceit to Strength: Genuine Tales on Watch Out</p>
+                                            <p className="card-text">From Deceit to Strength: Genuine Tales on Watchout</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Lessons in Love and Loss: Echoes from Watch Out</p>
+                                            <p className="card-text">Lessons in Love and Loss: Echoes from Watchout</p>
                                         </div>
                                     </div>
                                 </div>
@@ -111,23 +111,19 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Revealing Fraud: Insider Stories from Watch Out's Community</p>
+                                            <p className="card-text">Revealing Fraud: Insider Stories from Watchout's Community</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4 col-lg-4">
-                            <h1>Our Newsletter</h1>
-                            <p className='footerText'>Subscribe to our newsletter and stay updated.</p>
-                            <form action="">
-                                <input type="text" className='form-control' placeholder='Enter Email' />
-                                <button className='btn'>Send</button>
-                                <h4>Follow Us</h4>
-                                <img src="/facebook.png" alt="" />
-                                <img src="/insta.png" className='mx-3' alt="" />
-                                <img src="/x.png" alt="" />
-                            </form>
+                            <h1>Follow Us</h1>
+                            <ul className='followList'>
+                                <li><img src="/facebook.png" alt="" /><Link href="" className='followLink'>www.facebook.com</Link></li>
+                                <li><img src="/insta.png" alt="" /><Link href="" className='followLink'>www.insta.com</Link></li>
+                                <li><img src="/x.png" alt="" /><Link href="" className='followLink'>www.twitter.com</Link></li>
+                            </ul>
                         </div>
                     </div>
 
@@ -135,7 +131,7 @@ const Footer = () => {
 
                     <div className="row">
                         <div className="col">
-                            <p className='bottomText-1'>@Copyright 2024 By WatchOutAlerts</p>
+                            <p className='bottomText-1'>@Copyright 2024 By Watchout Alert</p>
                         </div>
                         <div className="col">
                             <p className='bottomText-2'>Design by Arthur James <Link href="https://elitewebsters.com/" className='link' target='_blank'>(Elite Websters)</Link></p>

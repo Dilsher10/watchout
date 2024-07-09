@@ -1054,9 +1054,10 @@ footer h1 {
   font-family: Open Sans;
   font-size: 32px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700 !important;
   letter-spacing: 0.425px;
   margin-top: -10px;
+  text-transform: uppercase;
 }
 
 footer .footerText {
@@ -1151,6 +1152,30 @@ footer .bottomText-2 .link {
   color: #fff;
 }
 
+footer .followList {
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+
+footer .followList li {
+  padding: 15px 0;
+}
+
+footer .followList li img {
+  margin-right: 10px;
+}
+
+footer .followList li .followLink {
+  text-decoration: none;
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
 
 .btn-1 {
   transition: .3s;
@@ -1698,13 +1723,18 @@ footer .bottomText-2 .link {
   left: 30%;
 }
 
-.sa{
+.sa {
   position: relative;
   left: 55%;
   bottom: 4.3rem;
 }
 
-.australia, .united-states, .united-kingdom, .south-africa, .russia, .canada {
+.australia,
+.united-states,
+.united-kingdom,
+.south-africa,
+.russia,
+.canada {
   display: none;
 }
 

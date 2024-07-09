@@ -80,11 +80,11 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>WatchOut has been a game-changer in my dating life. The customizable alerts allowed me to set my safety parameters, and the app's guidance has been invaluable. It's like having a personal safety advisor in my pocket.</p>
+                                <p>Watchout has been a game-changer in my dating life. The customizable alerts allowed me to set my safety parameters, and the app's guidance has been invaluable. It's like having a personal safety advisor in my pocket.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">
-                                <img className="img-fluid" src="/Testii-1.png" alt="" />
+                                <img className="img-fluid" src="/Testi-2.png" alt="" />
                             </div>
                         </div>
                         <div className="dpp_item" data-class="2" data-position="2">
@@ -103,11 +103,11 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>Using WatchOut has made me feel more in control while dating. The range of alerts and advice helped me make informed decisions, and I feel much more confident navigating the complexities of relationships.</p>
+                                <p>Using Watchout has made me feel more in control while dating. The range of alerts and advice helped me make informed decisions, and I feel much more confident navigating the complexities of relationships.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">
-                                <img className="img-fluid" src="/Testi-2.png" alt="" />
+                                <img className="img-fluid" src="/Testii-1.png" alt="" />
                             </div>
                         </div>
                         <div className="dpp_item" data-class="3" data-position="3">
@@ -126,7 +126,7 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>I rely on WatchOut for every date now. Being able to tailor alerts based on location and warning labels gives me peace of mind. It's a vital tool for anyone looking to date more safely.</p>
+                                <p>I rely on Watchout for every date now. Being able to tailor alerts based on location and warning labels gives me peace of mind. It's a vital tool for anyone looking to date more safely.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">
