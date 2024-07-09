@@ -67,7 +67,8 @@ const Slider = () => {
                         <div className="dp_item" data-class="1" data-position="1">
                             <div className="dp-content">
                                 <h2>THE SWEETHEART SWINDLER</h2>
-                                <p>A charming and sexy young woman swept him off his feet.  Consistent calls and video chats which consisted of sharing life stories created a bond removing barriers and the likelihood for distrust.  Little did he know this was a meticulous trap used many times on unsuspecting men!  After months of affectionate messages, he stepped up to help her with many financial needs.  But, his supposed partner disappeared, taking with her a significant sum of his hard-earned savings.  It turned out to be a heart-wrenching case of the “Sweetheart Swindler” leaving him emotionally shattered and financially drained.</p>
+                                <p>A charming and sexy young woman swept him off his feet.  Consistent calls and video chats which consisted of sharing life stories created a bond removing barriers and the likelihood for distrust.  Little did he know this was a meticulous trap used many times on unsuspecting men!</p>
+                                <p>After months of affectionate messages, he stepped up to help her with many financial needs.  But, his supposed partner disappeared, taking with her a significant sum of his hard-earned savings.  It turned out to be a heart-wrenching case of the “Sweetheart Swindler” leaving him emotionally shattered and financially drained.</p>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="col-md-1">
@@ -111,8 +112,10 @@ const Slider = () => {
                         <div className="dp_item" data-class="3" data-position="3">
                             <div className="dp-content">
                                 <h2>THE CATFISH CATASTROPHE </h2>
-                                <p>I fell head over heels for Alex on a dating App. We shared deep conversations and seemingly genuine emotions. However, what began as a promising relationship turned out to be a catfishing scheme. The person behind the screen was not who he claimed to be. His identity was fabricated, and his intentions were far from sincere, leaving me questioning everything I thought was real.</p>
-                                <div className="card">
+                                <p>I fell head over heels for Alex on a dating App. We shared deep conversations and seemingly genuine emotions.</p>
+                                <p>However, what began as a promising relationship turned out to be a catfishing scheme.</p>
+                                <p>The person behind the screen was not who he claimed to be. His identity was fabricated, and his intentions were far from sincere, leaving me questioning everything I thought was real.</p>
+                                <div className="card pb-5">
                                     <div className="row g-0">
                                         <div className="col-md-1">
                                             <img src="/testi-1.png" className="img-fluid rounded-start" alt="..." />

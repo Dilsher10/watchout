@@ -92,7 +92,7 @@ const Footer = () => {
                         </div>
                         <div className="col-sm-12 col-md-4 col-lg-4">
                             <img src="/blog-2.png" className='img-fluid' id='footerImg' alt="" />
-                            <div className="card mb-4">
+                            <div className="card mb-3">
                                 <div className="row g-0">
                                     <div className="col-md-1">
                                         <img src="/footer_icon.png" className="img-fluid rounded-start" alt="..." />
@@ -104,7 +104,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="card mb-3">
+                            <div className="card">
                                 <div className="row g-0">
                                     <div className="col-md-1">
                                         <img src="/footer_icon.png" className="img-fluid rounded-start" alt="..." />
@@ -132,9 +132,6 @@ const Footer = () => {
                     <div className="row">
                         <div className="col">
                             <p className='bottomText-1'>@Copyright 2024 By Watchout Alert</p>
-                        </div>
-                        <div className="col">
-                            <p className='bottomText-2'>Design by Arthur James <Link href="https://elitewebsters.com/" className='link' target='_blank'>(Elite Websters)</Link></p>
                         </div>
                     </div>
                 </div>

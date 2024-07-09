@@ -342,7 +342,7 @@ export default function Home() {
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h2>Search For Alerts</h2>
               <p className='text-2'>Improve your dating experience through personalized alerts. Customize your search based on location and warning labels encompassing harassment, physical abuse, deceit, and other crucial factors. Specify preferences such as gender, ethnicity, age, and dating timeline to create a safety net. Take control of your safety by setting personalized alerts aligned with your dating preferences, ensuring protection against possible concerns in relationships.</p>
-              <button className='btn-3'>Join Now</button>
+              <button className='btn-3' data-bs-toggle="modal" data-bs-target="#signupModal">Join Now</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
               <form className="row g-3">
