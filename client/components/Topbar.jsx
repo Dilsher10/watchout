@@ -14,7 +14,7 @@ const Topbar = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <p className="card-text">+1234567890</p>
+                                        <p className="card-text">302-276-8580</p>
                                     </div>
                                 </div>
                             </div>

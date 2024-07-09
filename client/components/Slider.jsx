@@ -66,8 +66,8 @@ const Slider = () => {
                     <div id="dp-slider">
                         <div className="dp_item" data-class="1" data-position="1">
                             <div className="dp-content">
-                                <h2>The Sweetheart Swindle</h2>
-                                <p>A charming individual swept me off her feet, promising a fairytale romance. Little did I know, this was a meticulously made trap. After months of affectionate messages and grand promises, my supposed partner disappeared, taking with them a significant sum of her hard-earned savings. It turned out to be a heart-wrenching case of the "Sweetheart Swindle," leaving me emotionally shattered and financially drained.</p>
+                                <h2>THE SWEETHEART SWINDLER</h2>
+                                <p>A charming and sexy young woman swept him off his feet.  Consistent calls and video chats which consisted of sharing life stories created a bond removing barriers and the likelihood for distrust.  Little did he know this was a meticulous trap used many times on unsuspecting men!  After months of affectionate messages, he stepped up to help her with many financial needs.  But, his supposed partner disappeared, taking with her a significant sum of his hard-earned savings.  It turned out to be a heart-wrenching case of the “Sweetheart Swindler” leaving him emotionally shattered and financially drained.</p>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="col-md-1">
@@ -88,8 +88,8 @@ const Slider = () => {
                         </div>
                         <div className="dp_item" data-class="2" data-position="2">
                             <div className="dp-content">
-                                <h2>The Loving Trap Fraud</h2>
-                                <p>I was seeking companionship and connected deeply with Mark. We painted a picturesque future together, expressing profound affection and commitment. However, I soon realized I had fallen victim to a meticulously woven web of deceit. What I thought was a blossoming romance turned out to be a loving trap fraud. The person I trusted wholeheartedly had no genuine feelings; it was a calculated ploy to emotionally manipulate me. As the truth unraveled, I found myself emotionally bruised and grappling with the devastation of a disturbed mindset and a broken heart.</p>
+                                <h2>THE LOVING TRAP FRAUD</h2>
+                                <p>I was seeking partnership and connected deeply with Mark.  We painted a picturesque future together, expressing profound affection and commitment.  However, I soon realized I had fallen victim to a meticulously woven web of deceit.  What I thought was a blossoming romance turned out to be a fraudulent love trap.  The person I trusted wholeheartedly and frankly undeservedly had no genuine feelings.  It was a calculated ploy to emotionally manipulate me.  As the truth unraveled, I found myself emotionally torn which led to depression and panic attacks.  I started isolating myself because of embarrassment and eventually turned to therapy to heal and regain control over my life.  I believe I suffered a broken heart and would not wish this on my worst enemy!</p>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="col-md-1">
@@ -110,8 +110,8 @@ const Slider = () => {
                         </div>
                         <div className="dp_item" data-class="3" data-position="3">
                             <div className="dp-content">
-                                <h2>The Catfish Catastrophe</h2>
-                                <p>I fell head over heels for Alex on a dating app. We shared deep conversations and seemingly genuine emotions. However, what began as a promising relationship turned out to be a catfishing scheme. The person behind the screen was not who he claimed to be. His identity was fabricated, and his intentions were far from sincere, leaving me questioning everything I thought was real.</p>
+                                <h2>THE CATFISH CATASTROPHE </h2>
+                                <p>I fell head over heels for Alex on a dating App. We shared deep conversations and seemingly genuine emotions. However, what began as a promising relationship turned out to be a catfishing scheme. The person behind the screen was not who he claimed to be. His identity was fabricated, and his intentions were far from sincere, leaving me questioning everything I thought was real.</p>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="col-md-1">
@@ -132,8 +132,8 @@ const Slider = () => {
                         </div>
                         <div className="dp_item" data-class="4" data-position="4">
                             <div className='dp-content'>
-                                <h2>The Deceptive Double Life</h2>
-                                <p>I was captivated by Harley, who met at a social gathering. As our relationship blossomed, I discovered the shocking truth: my partner was leading a double life. Juggling multiple identities, they were simultaneously involved with numerous unsuspecting individuals, each believing I was in a committed relationship. My trust was shattered, and the revelation left me reeling with disbelief.</p>
+                                <h2>THE DECEPTIVE DOUBLE LIFE</h2>
+                                <p>I was captivated by Harley who I met at a social gathering.  I felt comfortable because we had mutual acquaintances in common.  The more we talked and our relationship began to blossom, the more I began to notice inconsistencies in what he was saying and the red flags continued to grow.  After 6 months, the shocking truth was revealed that Harley was a married man with three children and was manipulating multiple women into believing he was single and in a committed relationship with them!  My trust was shattered and the revelation left me reeling with disbelief.</p>
                                 <div className="card">
                                     <div className="row g-0">
                                         <div className="col-md-1">

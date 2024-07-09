@@ -52,8 +52,8 @@ export default function Home() {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h1>STOP DATING BLINDLY</h1>
-              <h3>Before Dating Watch Out</h3>
-              <p>Are you tired of swiping left and right, hoping to find that special someone only to stumble upon deceptive individuals looking to exploit your trust? At WatchOut, we're on a mission to revolutionize the dating scene by empowering you with the knowledge and tools to protect yourself against fraudulent schemes.</p>
+              <h3>Before Dating Watchout</h3>
+              <p>Are you tired of swiping left or right, hoping to be matched with that special person only to find in the end that the individual who you started to grow close to and began to trust was there to manipulate and exploit you?  At Watchout Alert, we are on a mission to revolutionize the dating scene in addition to relationships overall by empowering you with the knowledge and tools you need to protect yourself against individuals whose sole purpose is to run game by being misleading, fake and phony!</p>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
               <img src="/home-1.png" className="img-fluid" alt="" />
@@ -90,7 +90,7 @@ export default function Home() {
                 <img src="/team.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Members</h5>
-                  <h5 className="card-title">322K+</h5>
+                  <h5 className="card-title">322+</h5>
                 </div>
               </div>
             </div>
@@ -131,15 +131,14 @@ export default function Home() {
 
 
       <div className="container processSec" data-aos="fade-up">
-        <h1>Watch Out Steps</h1>
-        <p className='processText'>Lorem Ipsum is simply dummy text of the printing </p>
+        <h1 className="mb-5">Watchout Alert Steps</h1>
         <div className="row">
           <div className="col">
-            <div className="card">
+            <div className="card" data-bs-toggle="modal" data-bs-target="#signupModal">
               <img src="/process-1.png" className="img-fluid" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Create an<br /> Account</h5>
-                <p>Join Watch Out for a secure dating journey. Set up your profile and access a vigilant community dedicated to safety.</p>
+                <p>Join Watchout for a secure dating journey. Set up your profile and access a vigilant community dedicated to safety.</p>
               </div>
             </div>
           </div>
@@ -152,7 +151,7 @@ export default function Home() {
             <div className="card">
               <img src="/process-2.png" className="img-fluid" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Watch Out <br /> Alerts</h5>
+                <h5 className="card-title">Watchout <br /> Alerts</h5>
                 <p>Stay updated on dating risks with real-time alerts. Contribute to a safer environment by staying informed.</p>
               </div>
             </div>
@@ -198,7 +197,7 @@ export default function Home() {
                   <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title">Communication is Key</h5>
-                      <p className="card-text">Effective communication lays the foundation for a healthy relationship. Watch out for partners who dodge important conversations, exhibit controlling behavior, or refuse to listen to your needs and feelings.</p>
+                      <p className="card-text">Effective communication lays the foundation for a healthy relationship. Watchout for partners who dodge important conversations, exhibit controlling behavior, or refuse to listen to your needs and feelings.</p>
                     </div>
                   </div>
                 </div>
@@ -211,7 +210,7 @@ export default function Home() {
                   <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title">Trusting Your Intuition</h5>
-                      <p className="card-text">Your gut feeling is a powerful tool. If something feels off or too good to be true, take the time to evaluate the situation. Trusting your intuition can safeguard you from entering relationships that might not be right for you.</p>
+                      <p className="card-text">Your gut feeling is a powerful tool. If something feels off or ‘is’ too good to be true, take the time to evaluate the situation. Trusting your intuition can safeguard you from entering relationships that might not be right for you.</p>
                     </div>
                   </div>
                 </div>
@@ -247,7 +246,7 @@ export default function Home() {
                     <h3>4K+</h3>
                   </div>
                   <p className="text-2">
-                    Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                    Amidst the vibrant US dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                   </p>
                 </div>
               ) : null}
@@ -257,10 +256,10 @@ export default function Home() {
                 <div className="div-1">
                   <h3>Alerts</h3>
                   <img src="/vertical-line.png" className="img-fluid" alt="" />
-                  <h3>4K+</h3>
+                  <h3>1K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  Amidst the vibrant Australia dating scene, the arrival of 1,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                 </p>
               </div>
               <div className={`united-states ${hoveredCountry === 'United States' ? 'showUs' : ''}`}>
@@ -272,7 +271,7 @@ export default function Home() {
                   <h3>4K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  Amidst the vibrant US dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                 </p>
               </div>
               <div className={`canada ${hoveredCountry === 'Canada' ? 'showCan' : ''}`}>
@@ -284,7 +283,7 @@ export default function Home() {
                   <h3>4K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  Amidst the vibrant Canada dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                 </p>
               </div>
               <div className={`russia ${hoveredCountry === 'Russia' ? 'showRus' : ''}`}>
@@ -293,10 +292,10 @@ export default function Home() {
                 <div className="div-1">
                   <h3>Alerts</h3>
                   <img src="/vertical-line.png" className="img-fluid" alt="" />
-                  <h3>4K+</h3>
+                  <h3>5K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  Amidst the vibrant Russia dating scene, the arrival of 5,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                 </p>
               </div>
               <div className={`united-kingdom ${hoveredCountry === 'United Kingdom' ? 'showUk' : ''}`}>
@@ -305,10 +304,10 @@ export default function Home() {
                 <div className="div-1">
                   <h3>Alerts</h3>
                   <img src="/vertical-line.png" className="img-fluid" alt="" />
-                  <h3>4K+</h3>
+                  <h3>3K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
+                  Amidst the vibrant UK dating scene, the arrival of 3,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections, and direct the intricacies of contemporary relationships prudently.
                 </p>
               </div>
               <div className={`south-africa ${hoveredCountry === 'South Africa' ? 'showSa' : ''}`}>
@@ -320,7 +319,7 @@ export default function Home() {
                   <h3>2K+</h3>
                 </div>
                 <p className="text-2">
-                  Amidst the vibrant UK dating scene, the arrival of 4,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections.
+                  Amidst the vibrant South Africa dating scene, the arrival of 2,000+ alerts acts as a decisive guide, steering individuals toward informed and secure romantic experiences. These alerts span from cautionary stories to invaluable advice, providing essential direction. They equip people to identify warning signs, understand genuine connections.
                 </p>
               </div>
             </div>
@@ -454,7 +453,7 @@ export default function Home() {
 
       <section className="blogSec" data-aos="fade-up">
         <div className="container">
-          <h1>Watch Out Blogs</h1>
+          <h1>Watchout Blogs</h1>
           <BlogSlider />
         </div>
       </section>

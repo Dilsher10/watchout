@@ -373,6 +373,7 @@ header p {
   border: 0;
   text-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .processSec img {
