@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 
 const Topbar = () => {
     return (
@@ -14,7 +15,7 @@ const Topbar = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <p className="card-text">302-276-8580</p>
+                                        <Link href="tel:302-276-8580" className="card-text">302-276-8580</Link>
                                     </div>
                                 </div>
                             </div>
