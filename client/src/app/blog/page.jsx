@@ -96,7 +96,7 @@ const Page = () => {
             </div>
 
 
-            <div className="container blogSec-3 m-auto" data-aos="fade-up">
+            <div className="container blogSec-3 m-auto mb-4" data-aos="fade-up">
                 <div className="row">
                     <div className="col-sm-12 col-md-6 col-lg-6">
                         <div className="card mb-5">

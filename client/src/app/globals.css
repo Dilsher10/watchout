@@ -1247,23 +1247,23 @@ footer .followList li .followLink {
 /* About Page */
 
 .aboutHeader {
-  padding: 4rem 0;
+  padding: 0rem 0;
 }
 
 .aboutHeader p {
   color: #FFF;
   font-family: Open Sans;
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
 }
 
 .aboutHeader h1 {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 35px !important;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
