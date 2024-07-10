@@ -1449,6 +1449,11 @@ footer .followList li .followLink {
   line-height: 3;
 }
 
+.contactSec .formSec-2 .contact{
+  text-decoration: none;
+  color: #FFF;
+}
+
 .contactSec .formSec-2 p img {
   width: 24px;
   margin-right: 10px;

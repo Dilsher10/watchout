@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Navbar from '../../../components/Navbar'
 import Topbar from '../../../components/Topbar'
 import Footer from '../../../components/Footer'
+import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -61,7 +62,7 @@ const Page = () => {
                     </div>
                     <div className="col-md-4 formSec-2">
                         <h3>Contact Info</h3>
-                        <p><img src="/phone-icon.png" alt=""/> +1234567890</p>
+                        <p><img src="/phone-icon.png" alt=""/> <Link href="tel:302-276-8580" className='contact'>302-276-8580</Link></p>
                         <p><img src="/mail.png" alt=""/> support@watchout-alert.com</p>
                         <div>
                             <img src="/group-icons.png" alt="" className='group-icons'/>
