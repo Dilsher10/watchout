@@ -310,9 +310,9 @@ header p {
   line-height: 26px;
 }
 
-header .img-fluid{
- position: relative;
- bottom: 30px;
+header .img-fluid {
+  position: relative;
+  bottom: 30px;
 }
 
 
@@ -1519,6 +1519,11 @@ footer .followList li .followLink {
 
 
 /* Blog Page */
+
+.blogHeader .img-fluid {
+  height: 82vh;
+  width: 100%;
+}
 
 .blogSec-1 {
   margin: 5rem auto;
