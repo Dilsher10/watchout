@@ -371,7 +371,12 @@ export default function Home() {
                 <div className="col-md-12">
                   <select className="form-select">
                     <option selected>Labels</option>
-                    <option>...</option>
+                    <option>Cheating</option>
+                    <option>Harassment</option>
+                    <option>Physical Abuse</option>
+                    <option>Play Boy/Girl</option>
+                    <option>Gold Digger</option>
+                    <option>Toxic</option>
                   </select>
                 </div>
                 <div className="col-4">
