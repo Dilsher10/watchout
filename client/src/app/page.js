@@ -173,7 +173,7 @@ export default function Home() {
             <div className="card">
               <img src="/process-3.png" className="img-fluid" alt="..." />
               <div className="card-body">
-              {isAuthenticated ? (
+                {isAuthenticated ? (
                   <>
                     <Link href="/user_dashboard/post-alert" className="card-title">Beware</Link>
                   </>
@@ -370,7 +370,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-12">
                   <select className="form-select">
-                    <option selected>Labels</option>
+                    <option selected>Alert Types</option>
                     <option>Cheating</option>
                     <option>Harassment</option>
                     <option>Physical Abuse</option>
@@ -382,25 +382,39 @@ export default function Home() {
                 <div className="col-6">
                   <select className="form-select">
                     <option selected>Gender</option>
-                    <option>...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div className="col-6">
                   <select className="form-select">
                     <option selected>Ethnicity</option>
-                    <option>...</option>
+                    <option>American Indian or Alaska Native</option>
+                    <option>Asian</option>
+                    <option>Black or African American</option>
+                    <option>Hispanic or Latino</option>
+                    <option>Native Hawaiian or Other Pacific Islander</option>
+                    <option>White</option>
                   </select>
                 </div>
                 <div className="col-md-6">
                   <select className="form-select">
                     <option selected>Dating Period</option>
-                    <option>...</option>
+                    <option>1 Month</option>
+                    <option>3 Months</option>
+                    <option>5 Months</option>
+                    <option>More than 1 Year</option>
+                    <option>More than 2 Year</option>
+                    <option>More than 3 Year</option>
+                    <option>More than 4 Year</option>
+                    <option>More than 5 Year</option>
                   </select>
                 </div>
                 <div className="col-md-6">
                   <select className="form-select">
                     <option selected>Age</option>
-                    <option>...</option>
+                    <option>18 to 25</option>
                   </select>
                 </div>
                 <div className="col-12">
