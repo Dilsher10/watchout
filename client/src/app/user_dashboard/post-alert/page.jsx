@@ -127,24 +127,24 @@ const Page = () => {
                                                 <label className="form-label">Alert Type</label>
                                                 <select className="form-select" onChange={(e) => setAlertType(e.target.value)}>
                                                     <option selected>Select Alert Type</option>
-                                                    <option>Cheating</option>
-                                                    <option>Harassment</option>
-                                                    <option>Physical Abuse</option>
-                                                    <option>Play Boy/Girl</option>
-                                                    <option>Gold Digger</option>
-                                                    <option>Toxic</option>
+                                                    <option value="Cheating">Cheating</option>
+                                                    <option value="Harassment">Harassment</option>
+                                                    <option value="Physical Abuse">Physical Abuse</option>
+                                                    <option value="Play Boy/Girl">Play Boy/Girl</option>
+                                                    <option value="Gold Digger">Gold Digger</option>
+                                                    <option value="Toxic">Toxic</option>
                                                 </select>
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Ethnicity</label>
                                                 <select className="form-select" onChange={(e) => setEthnicity(e.target.value)}>
                                                     <option selected>Select Ethnicity</option>
-                                                    <option>American Indian or Alaska Native</option>
-                                                    <option>Asian</option>
-                                                    <option>Black or African American</option>
-                                                    <option>Hispanic or Latino</option>
-                                                    <option>Native Hawaiian or Other Pacific Islander</option>
-                                                    <option>White</option>
+                                                    <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                                                    <option value="Asian">Asian</option>
+                                                    <option value="Black or African American">Black or African American</option>
+                                                    <option value="Hispanic or Latino">Hispanic or Latino</option>
+                                                    <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                                    <option value="White">White</option>
                                                 </select>
                                             </div>
                                             <div className="col-6">
