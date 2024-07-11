@@ -379,54 +379,6 @@ export default function Home() {
                     <option>Toxic</option>
                   </select>
                 </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Cheating
-                    </label>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Harassment
-                    </label>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Physical Abuse
-                    </label>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Play Boy/Girl
-                    </label>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Gold Digger
-                    </label>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" />
-                    <label className="form-check-label">
-                      Toxic
-                    </label>
-                  </div>
-                </div>
                 <div className="col-6">
                   <select className="form-select">
                     <option selected>Gender</option>
