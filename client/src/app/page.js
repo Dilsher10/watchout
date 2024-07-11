@@ -364,57 +364,65 @@ export default function Home() {
               <form className="row g-3">
                 <div className="col-md-12">
                   <select className="form-select">
-                    <option selected>Location</option>
-                    <option>...</option>
+                    <option selected>Country</option>
+                    <option value="US">US</option>
+                    <option value="UK">UK</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="South Africa">South Africa</option>
                   </select>
                 </div>
                 <div className="col-md-12">
                   <select className="form-select">
                     <option selected>Alert Types</option>
-                    <option>Cheating</option>
-                    <option>Harassment</option>
-                    <option>Physical Abuse</option>
-                    <option>Play Boy/Girl</option>
-                    <option>Gold Digger</option>
-                    <option>Toxic</option>
+                    <option value="Cheating">Cheating</option>
+                    <option value="Harassment">Harassment</option>
+                    <option value="Physical Abuse">Physical Abuse</option>
+                    <option value="Play Boy/Girl">Play Boy/Girl</option>
+                    <option value="Gold Digger">Gold Digger</option>
+                    <option value="Toxic">Toxic</option>
                   </select>
                 </div>
                 <div className="col-6">
                   <select className="form-select">
                     <option selected>Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div className="col-6">
                   <select className="form-select">
                     <option selected>Ethnicity</option>
-                    <option>American Indian or Alaska Native</option>
-                    <option>Asian</option>
-                    <option>Black or African American</option>
-                    <option>Hispanic or Latino</option>
-                    <option>Native Hawaiian or Other Pacific Islander</option>
-                    <option>White</option>
+                    <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Black or African American">Black or African American</option>
+                    <option value="Hispanic or Latino">Hispanic or Latino</option>
+                    <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                    <option value="White">White</option>
                   </select>
                 </div>
                 <div className="col-md-6">
                   <select className="form-select">
                     <option selected>Dating Period</option>
-                    <option>1 Month</option>
-                    <option>3 Months</option>
-                    <option>5 Months</option>
-                    <option>More than 1 Year</option>
-                    <option>More than 2 Year</option>
-                    <option>More than 3 Year</option>
-                    <option>More than 4 Year</option>
-                    <option>More than 5 Year</option>
+                    <option value="1 Month">1 Month</option>
+                    <option value="3 Months">3 Months</option>
+                    <option value="5 Months">5 Months</option>
+                    <option value="More than 1 Year">More than 1 Year</option>
+                    <option value="More than 2 Year">More than 2 Year</option>
+                    <option value="More than 3 Year">More than 3 Year</option>
+                    <option value="More than 4 Year">More than 4 Year</option>
+                    <option value="More than 5 Year">More than 5 Year</option>
                   </select>
                 </div>
                 <div className="col-md-6">
                   <select className="form-select">
                     <option selected>Age</option>
-                    <option>18 to 25</option>
+                    <option value="18 - 25">18 - 25</option>
+                    <option value="25 - 30">25 - 30</option>
+                    <option value="30 - 35">30 - 35</option>
+                    <option value="35 - 40">35 - 40</option>
                   </select>
                 </div>
                 <div className="col-12">

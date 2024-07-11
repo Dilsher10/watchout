@@ -5,8 +5,8 @@ const Post = require("../models/post-model");
 
 const post = async (req, res) => {
     try {
-        const { name, gender, dob, city, state, country, phone, email, dating, toxic, cheat, scam, ethnicity, nationality, description} = req.body;
-        const userPosted = await Post.create({ name, image: req.file.filename, gender, dob, city, state, country, phone, email, dating, toxic, cheat, scam, ethnicity, nationality, description});
+        const { name, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description} = req.body;
+        const userPosted = await Post.create({ name, image: req.file.filename, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description});
         if (userPosted) {
             res.status(201).json({ message: "Posted Successfully" });
         }
