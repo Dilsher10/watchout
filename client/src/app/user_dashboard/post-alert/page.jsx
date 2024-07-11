@@ -22,9 +22,7 @@ const Page = () => {
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [dating, setDating] = useState("");
-    const [toxic, setToxic] = useState("");
-    const [cheat, setCheat] = useState("");
-    const [scam, setScam] = useState("");
+    const [alertType, setAlertType] = useState("");
     const [ethnicity, setEthnicity] = useState("");
     const [nationality, setNationality] = useState("");
     const [description, setDescription] = useState("");
@@ -44,9 +42,7 @@ const Page = () => {
             formData.append("phone", phone);
             formData.append("email", email);
             formData.append("dating", dating);
-            formData.append("toxic", toxic);
-            formData.append("cheat", cheat);
-            formData.append("scam", scam);
+            formData.append("alertType", alertType);
             formData.append("ethnicity", ethnicity);
             formData.append("nationality", nationality);
             formData.append("description", description);
@@ -128,25 +124,28 @@ const Page = () => {
                                                 </select>
                                             </div>
                                             <div className="col-12 my-3">
-                                                <div className="form-check form-check-inline wrapper">
-                                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="Toxic" onChange={(e) => setToxic(e.target.value)} />
-                                                    <label className="form-check-label" for="inlineCheckbox1">Toxic</label>
-                                                    <div className="tooltip">It is a Toxic !</div>
-                                                </div>
-                                                <div className="form-check form-check-inline wrapper">
-                                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="Cheat" onChange={(e) => setCheat(e.target.value)} />
-                                                    <label className="form-check-label" for="inlineCheckbox2">Cheat</label>
-                                                    <div className="tooltip">It is a Cheat !</div>
-                                                </div>
-                                                <div className="form-check form-check-inline wrapper">
-                                                    <input className="form-check-input" type="checkbox" id="inlineCheckbox3" value="Scam" onChange={(e) => setScam(e.target.value)} />
-                                                    <label className="form-check-label" for="inlineCheckbox3">Scam</label>
-                                                    <div className="tooltip">It is a Scam !</div>
-                                                </div>
+                                                <label className="form-label">Alert Type</label>
+                                                <select className="form-select" onChange={(e) => setAlertType(e.target.value)}>
+                                                    <option selected>Select Alert Type</option>
+                                                    <option>Cheating</option>
+                                                    <option>Harassment</option>
+                                                    <option>Physical Abuse</option>
+                                                    <option>Play Boy/Girl</option>
+                                                    <option>Gold Digger</option>
+                                                    <option>Toxic</option>
+                                                </select>
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Ethnicity</label>
-                                                <input type="text" className="form-control" placeholder='Enter ethnicity' onChange={(e) => setEthnicity(e.target.value)} />
+                                                <select className="form-select" onChange={(e) => setEthnicity(e.target.value)}>
+                                                    <option selected>Select Ethnicity</option>
+                                                    <option>American Indian or Alaska Native</option>
+                                                    <option>Asian</option>
+                                                    <option>Black or African American</option>
+                                                    <option>Hispanic or Latino</option>
+                                                    <option>Native Hawaiian or Other Pacific Islander</option>
+                                                    <option>White</option>
+                                                </select>
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Nationality</label>
