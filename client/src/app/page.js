@@ -112,8 +112,8 @@ export default function Home() {
               <p>Submitting or viewing alerts has never been easier. Our user-friendly interface ensures a smooth experience, allowing you to swiftly submit any concerns or browse through alerts with just a few clicks. Whether you're reporting suspicious activity or staying updated on potential risks, our system streamlines the process, keeping you informed and vigilant. Stay ahead of the curve and maintain your safety effortlessly with our intuitive alert system.</p>
               {isAuthenticated ? (
                 <>
-                  <Link href="/user_dashboard" className='btn-2'>Submit Alert</Link>
-                  <Link href="/user_dashboard" className='btn-1'>View Alerts</Link>
+                  <Link href="/user_dashboard/post-alert" className='btn-2'>Submit Alert</Link>
+                  <Link href="/user_dashboard/view-alert" className='btn-1'>View Alerts</Link>
                 </>
               ) : (
                 <>
@@ -151,7 +151,15 @@ export default function Home() {
             <div className="card">
               <img src="/process-2.png" className="img-fluid" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Watchout <br /> Alerts</h5>
+                {isAuthenticated ? (
+                  <>
+                    <Link href="/user_dashboard/view-alert" className="card-title">Watchout <br /> Alerts</Link>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/user_dashboard/login" className="card-title">Watchout <br /> Alerts</Link>
+                  </>
+                )}
                 <p>Stay updated on dating risks with real-time alerts. Contribute to a safer environment by staying informed.</p>
               </div>
             </div>
@@ -165,7 +173,15 @@ export default function Home() {
             <div className="card">
               <img src="/process-3.png" className="img-fluid" alt="..." />
               <div className="card-body">
-                <h5 className="card-title">Beware</h5>
+              {isAuthenticated ? (
+                  <>
+                    <Link href="/user_dashboard/post-alert" className="card-title">Beware</Link>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/user_dashboard/login" className="card-title">Beware</Link>
+                  </>
+                )}
                 <p>Be cautious of red flags and deceitful behaviors. Trust your instincts and use shared experiences to stay safe.</p>
               </div>
             </div>
@@ -179,7 +195,7 @@ export default function Home() {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
               {isAuthenticated ? (
-                <Link href="/user_dashboard">
+                <Link href="/user_dashboard/post-alert">
                   <img src="/home-2.png" className="img-fluid" id="multiImg" alt="" />
                 </Link>
               ) : (

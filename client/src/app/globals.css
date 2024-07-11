@@ -415,6 +415,16 @@ header .img-fluid {
   padding-bottom: 20px;
 }
 
+.processSec .card .card-title {
+  text-decoration: none;
+  color: #252645;
+  font-family: Open Sans;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: 0.277px;
+}
 
 
 
@@ -1314,7 +1324,7 @@ footer .followList li .followLink {
   margin-top: 30px;
 }
 
-.about-sec-2 .img-fluid{
+.about-sec-2 .img-fluid {
   width: 85%;
 }
 
@@ -1449,7 +1459,7 @@ footer .followList li .followLink {
   line-height: 3;
 }
 
-.contactSec .formSec-2 .contact{
+.contactSec .formSec-2 .contact {
   text-decoration: none;
   color: #FFF;
 }
