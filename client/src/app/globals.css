@@ -494,7 +494,7 @@ header .img-fluid {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 40px 0;
+  padding: 40px 40px 0px 0px;
   margin: 40px auto;
 }
 
@@ -533,7 +533,7 @@ header .img-fluid {
   padding: 10px 30px;
   border: 1px solid #252645;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 40px auto;
   display: flex;
   transition: .3s;
 }
