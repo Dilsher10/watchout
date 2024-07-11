@@ -10,6 +10,7 @@ import Topbar from '../../components/Topbar';
 import Footer from '../../components/Footer';
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import axios from 'axios';
 
 
 export default function Home() {
@@ -38,6 +39,36 @@ export default function Home() {
     }
 
   }, []);
+
+
+  // Search
+
+  const [country, setCountry] = useState("");
+  const [alertType, setAlertType] = useState("");
+  const [gender, setGender] = useState("");
+  const [ethnicity, setEthnicity] = useState("");
+  const [dating, setDating] = useState("");
+  const [dob, setDob] = useState("");
+
+
+  const postSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData();
+
+      formData.append("country", country);
+      formData.append("alertType", alertType);
+      formData.append("gender", gender);
+      formData.append("ethnicity", ethnicity);
+      formData.append("dating", dating);
+      formData.append("dob", dob);
+
+      const response = await axios.post(process.env.NEXT_PUBLIC_API_URL + "/api/auth/user/search", formData);
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
 
   return (
@@ -361,9 +392,9 @@ export default function Home() {
               <button className='btn-3' data-bs-toggle="modal" data-bs-target="#signupModal">Join Now</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
-              <form className="row g-3">
+              <form className="row g-3" onSubmit={postSubmit}>
                 <div className="col-md-12">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setCountry(e.target.value)}>
                     <option selected>Country</option>
                     <option value="US">US</option>
                     <option value="UK">UK</option>
@@ -374,7 +405,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-12">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setAlertType(e.target.value)}>
                     <option selected>Alert Types</option>
                     <option value="Cheating">Cheating</option>
                     <option value="Harassment">Harassment</option>
@@ -385,7 +416,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setGender(e.target.value)}>
                     <option selected>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -393,7 +424,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setEthnicity(e.target.value)}>
                     <option selected>Ethnicity</option>
                     <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
                     <option value="Asian">Asian</option>
@@ -404,7 +435,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setDating(e.target.value)}>
                     <option selected>Dating Period</option>
                     <option value="1 Month">1 Month</option>
                     <option value="3 Months">3 Months</option>
@@ -417,8 +448,9 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select">
+                  <select className="form-select" onChange={(e) => setDob(e.target.value)}>
                     <option selected>Age</option>
+                    <option value="2024-07-11">2024-07-11</option>
                     <option value="18 - 25">18 - 25</option>
                     <option value="25 - 30">25 - 30</option>
                     <option value="30 - 35">30 - 35</option>
@@ -426,7 +458,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-12">
-                  <button className="searchBtn">Search</button>
+                  <button type="submit" className="searchBtn">Search</button>
                 </div>
               </form>
             </div>

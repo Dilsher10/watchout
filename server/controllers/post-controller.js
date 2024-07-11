@@ -5,8 +5,8 @@ const Post = require("../models/post-model");
 
 const post = async (req, res) => {
     try {
-        const { name, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description} = req.body;
-        const userPosted = await Post.create({ name, image: req.file.filename, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description});
+        const { name, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description } = req.body;
+        const userPosted = await Post.create({ name, image: req.file.filename, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description });
         if (userPosted) {
             res.status(201).json({ message: "Posted Successfully" });
         }
@@ -30,4 +30,26 @@ const read = async (req, res) => {
 
 
 
-module.exports = { post, read };    
+// Search
+
+const search = async (req, res) => {
+    try {
+        const { country, alertType, gender, ethnicity, dating, dob } = req.body;
+        const filters = {
+            ...(country && { country }),
+            ...(alertType && { alertType }),
+            ...(gender && { gender }),
+            ...(ethnicity && { ethnicity }),
+            ...(dating && { dating }),
+            ...(dob && { dob })
+        };
+        const alerts = await Post.find(filters);
+        res.json(alerts);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+
+
+module.exports = { post, read, search };    

@@ -35,6 +35,8 @@ router.post('/user/post',upload.single('image'),postControllers.post);
 
 router.route('/user/view-post').get(postControllers.read);
 
+router.route('/user/search').post(postControllers.search);
+
 
 
 module.exports = router;
