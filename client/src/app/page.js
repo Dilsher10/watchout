@@ -11,6 +11,7 @@ import Footer from '../../components/Footer';
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import axios from 'axios';
+const URL = process.env.NEXT_PUBLIC_API_URL + "/api/auth/user/search";
 
 
 export default function Home() {
@@ -43,30 +44,51 @@ export default function Home() {
 
   // Search
 
-  const [country, setCountry] = useState("");
-  const [alertType, setAlertType] = useState("");
-  const [gender, setGender] = useState("");
-  const [ethnicity, setEthnicity] = useState("");
-  const [dating, setDating] = useState("");
-  const [dob, setDob] = useState("");
+  const [user, setUser] = useState({
+    country: "",
+    alertType: "",
+    gender: "",
+    ethnicity: "",
+    dating: "",
+    dob: "",
+  })
 
+  const [responseData, setResponseData] = useState(null);
 
-  const postSubmit = async (e) => {
+  const handleInput = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+      });
 
-      formData.append("country", country);
-      formData.append("alertType", alertType);
-      formData.append("gender", gender);
-      formData.append("ethnicity", ethnicity);
-      formData.append("dating", dating);
-      formData.append("dob", dob);
+      if (response.ok) {
+        const res_data = await response.json();
+        if (res_data && res_data.country) {
+          const country = res_data.country;
+          console.log(country);
+          setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", dob: "" });
+        } else {
+          console.error("Country not found in response data.");
+        }
+      }
 
-      const response = await axios.post(process.env.NEXT_PUBLIC_API_URL + "/api/auth/user/search", formData);
-      console.log(response.data);
     } catch (error) {
-      console.error("Error:", error);
+      console.log(error);
     }
   };
 
@@ -92,6 +114,7 @@ export default function Home() {
           </div>
         </div>
       </header>
+
 
       {/* Icons Section */}
 
@@ -392,10 +415,10 @@ export default function Home() {
               <button className='btn-3' data-bs-toggle="modal" data-bs-target="#signupModal">Join Now</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
-              <form className="row g-3" onSubmit={postSubmit}>
+              <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col-md-12">
-                  <select className="form-select" onChange={(e) => setCountry(e.target.value)}>
-                    <option selected>Country</option>
+                  <select className="form-select" name="country" onChange={handleInput}>
+                    <option>Country</option>
                     <option value="US">US</option>
                     <option value="UK">UK</option>
                     <option value="Russia">Russia</option>
@@ -405,8 +428,8 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-12">
-                  <select className="form-select" onChange={(e) => setAlertType(e.target.value)}>
-                    <option selected>Alert Types</option>
+                  <select className="form-select" name="alertType" onChange={handleInput}>
+                    <option>Alert Types</option>
                     <option value="Cheating">Cheating</option>
                     <option value="Harassment">Harassment</option>
                     <option value="Physical Abuse">Physical Abuse</option>
@@ -416,16 +439,16 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select" onChange={(e) => setGender(e.target.value)}>
-                    <option selected>Gender</option>
+                  <select className="form-select" name="gender" onChange={handleInput}>
+                    <option>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select" onChange={(e) => setEthnicity(e.target.value)}>
-                    <option selected>Ethnicity</option>
+                  <select className="form-select" name="ethnicity" onChange={handleInput}>
+                    <option>Ethnicity</option>
                     <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
                     <option value="Asian">Asian</option>
                     <option value="Black or African American">Black or African American</option>
@@ -435,8 +458,8 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" onChange={(e) => setDating(e.target.value)}>
-                    <option selected>Dating Period</option>
+                  <select className="form-select" name="dating" onChange={handleInput}>
+                    <option>Dating Period</option>
                     <option value="1 Month">1 Month</option>
                     <option value="3 Months">3 Months</option>
                     <option value="5 Months">5 Months</option>
@@ -448,9 +471,10 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" onChange={(e) => setDob(e.target.value)}>
-                    <option selected>Age</option>
+                  <select className="form-select" name="dob" onChange={handleInput}>
+                    <option>Age</option>
                     <option value="2024-07-11">2024-07-11</option>
+                    <option value="2003-06-10">2003-06-10</option>
                     <option value="18 - 25">18 - 25</option>
                     <option value="25 - 30">25 - 30</option>
                     <option value="30 - 35">30 - 35</option>
@@ -465,6 +489,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      {/* Table */}
+
+      {responseData && (
+        <div>
+          {/* Render the specific fields from the response data */}
+          <p>Country: {responseData.country}</p>
+          <p>Alert Type: {responseData.alertType}</p>
+          <p>Gender: {responseData.gender}</p>
+          <p>Ethnicity: {responseData.ethnicity}</p>
+          <p>Dating: {responseData.dating}</p>
+          <p>DOB: {responseData.dob}</p>
+        </div>
+      )}
 
 
       {/* Testimonial Slider */}
