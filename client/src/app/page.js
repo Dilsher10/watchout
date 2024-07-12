@@ -10,7 +10,6 @@ import Topbar from '../../components/Topbar';
 import Footer from '../../components/Footer';
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import axios from 'axios';
 const URL = process.env.NEXT_PUBLIC_API_URL + "/api/auth/user/search";
 
 
@@ -54,6 +53,7 @@ export default function Home() {
   })
 
   const [responseData, setResponseData] = useState(null);
+  const [message, setMessage] = useState("");
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -90,6 +90,9 @@ export default function Home() {
             age: firstItem.age || ""
           });
         }
+      } else {
+        setResponseData(null); // Clear response data
+        setMessage("Record not found"); // Set state to show the message
       }
     } catch (error) {
       console.log(error);
@@ -492,8 +495,8 @@ export default function Home() {
 
           {/* Table */}
 
-          {responseData && (
-            <table class="table table-hover">
+          {responseData ? (
+            <table className="table table-hover">
               <thead>
                 <tr>
                   <th scope="col">Country</th>
@@ -515,6 +518,26 @@ export default function Home() {
                 </tr>
               </tbody>
             </table>
+          ) : (
+            message && (
+              <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">Alert Type</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Ethnicity</th>
+                    <th scope="col">Dating</th>
+                    <th scope="col">Age</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colSpan="6" className="notFound">{message}</td>
+                  </tr>
+                </tbody>
+              </table>
+            )
           )}
         </div>
       </section>

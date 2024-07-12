@@ -51,7 +51,7 @@ const search = async (req, res) => {
                 }
             };
         }
-        
+
         const filters = {
             ...(country && { country }),
             ...(alertType && { alertType }),
@@ -61,7 +61,11 @@ const search = async (req, res) => {
             ...ageFilter
         };
         const alerts = await Post.find(filters);
-        res.json(alerts);
+        if (alerts.length === 0) {
+            res.status(404).json({ message: "Record not found" });
+        } else {
+            res.json(alerts);
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
