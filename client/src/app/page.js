@@ -78,15 +78,19 @@ export default function Home() {
 
       if (response.ok) {
         const res_data = await response.json();
-        if (res_data && res_data.country) {
-          const country = res_data.country;
-          console.log(country);
-          setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", dob: "" });
-        } else {
-          console.error("Country not found in response data.");
+        setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", dob: "" });
+        if (res_data.length > 0) {
+          const firstItem = res_data[0];
+          setResponseData({
+            country: firstItem.country || "",
+            alertType: firstItem.alertType || "",
+            gender: firstItem.gender || "",
+            ethnicity: firstItem.ethnicity || "",
+            dating: firstItem.dating || "",
+            dob: firstItem.dob || ""
+          });
         }
       }
-
     } catch (error) {
       console.log(error);
     }
@@ -487,23 +491,35 @@ export default function Home() {
               </form>
             </div>
           </div>
+
+          {/* Table */}
+
+          {responseData && (
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Country</th>
+                  <th scope="col">Alert Type</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Ethnicity</th>
+                  <th scope="col">Dating</th>
+                  <th scope="col">Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{responseData.country}</td>
+                  <td>{responseData.alertType}</td>
+                  <td>{responseData.gender}</td>
+                  <td>{responseData.ethnicity}</td>
+                  <td>{responseData.dating}</td>
+                  <td>{responseData.dob}</td>
+                </tr>
+              </tbody>
+            </table>
+          )}
         </div>
       </section>
-
-
-      {/* Table */}
-
-      {responseData && (
-        <div>
-          {/* Render the specific fields from the response data */}
-          <p>Country: {responseData.country}</p>
-          <p>Alert Type: {responseData.alertType}</p>
-          <p>Gender: {responseData.gender}</p>
-          <p>Ethnicity: {responseData.ethnicity}</p>
-          <p>Dating: {responseData.dating}</p>
-          <p>DOB: {responseData.dob}</p>
-        </div>
-      )}
 
 
       {/* Testimonial Slider */}
