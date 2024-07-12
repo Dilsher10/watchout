@@ -50,7 +50,7 @@ export default function Home() {
     gender: "",
     ethnicity: "",
     dating: "",
-    dob: "",
+    age: "",
   })
 
   const [responseData, setResponseData] = useState(null);
@@ -78,7 +78,7 @@ export default function Home() {
 
       if (response.ok) {
         const res_data = await response.json();
-        setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", dob: "" });
+        setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", age: "" });
         if (res_data.length > 0) {
           const firstItem = res_data[0];
           setResponseData({
@@ -87,7 +87,7 @@ export default function Home() {
             gender: firstItem.gender || "",
             ethnicity: firstItem.ethnicity || "",
             dating: firstItem.dating || "",
-            dob: firstItem.dob || ""
+            age: firstItem.age || ""
           });
         }
       }
@@ -475,10 +475,8 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" name="dob" onChange={handleInput}>
+                  <select className="form-select" name="age" onChange={handleInput}>
                     <option>Age</option>
-                    <option value="2024-07-11">2024-07-11</option>
-                    <option value="2003-06-10">2003-06-10</option>
                     <option value="18 - 25">18 - 25</option>
                     <option value="25 - 30">25 - 30</option>
                     <option value="30 - 35">30 - 35</option>
@@ -513,7 +511,7 @@ export default function Home() {
                   <td>{responseData.gender}</td>
                   <td>{responseData.ethnicity}</td>
                   <td>{responseData.dating}</td>
-                  <td>{responseData.dob}</td>
+                  <td>{responseData.age}</td>
                 </tr>
               </tbody>
             </table>

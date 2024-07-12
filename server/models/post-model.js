@@ -17,6 +17,9 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    age: {
+        type: String
+    },
     city: {
         type: String,
         required: true,
