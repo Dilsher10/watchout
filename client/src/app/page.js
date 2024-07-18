@@ -10,6 +10,7 @@ import Topbar from '../../components/Topbar';
 import Footer from '../../components/Footer';
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
+const URL = process.env.NEXT_PUBLIC_API_URL + "/api/auth/user/search";
 
 
 export default function Home() {
@@ -39,6 +40,62 @@ export default function Home() {
     }
 
   }, []);
+
+
+  // Search
+
+  const [user, setUser] = useState({
+    country: "",
+    alertType: "",
+    gender: "",
+    ethnicity: "",
+    dating: "",
+    age: "",
+  })
+
+  const [responseData, setResponseData] = useState([]);
+  const [message, setMessage] = useState("");
+
+  const isEmpty = !responseData || responseData.length === 0;
+
+  const handleInput = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+      });
+
+      if (response.ok) {
+        const res_data = await response.json();
+        setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", age: "" });
+        if (res_data.length > 0) {
+          setResponseData(res_data);
+        } else {
+          setResponseData([]);
+          setMessage("Record not found");
+        }
+      } else {
+        setResponseData(null);
+        setMessage("Record not found");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -362,9 +419,9 @@ export default function Home() {
               <button className='btn-3' data-bs-toggle="modal" data-bs-target="#signupModal">Join Now</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
-              <form className="row g-3">
+              <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col-md-12">
-                  <select className="form-select" name="country">
+                  <select className="form-select" name="country" onChange={handleInput}>
                     <option>Country</option>
                     <option value="US">US</option>
                     <option value="UK">UK</option>
@@ -375,7 +432,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-12">
-                  <select className="form-select" name="alertType">
+                  <select className="form-select" name="alertType" onChange={handleInput}>
                     <option>Alert Types</option>
                     <option value="Cheating">Cheating</option>
                     <option value="Harassment">Harassment</option>
@@ -386,7 +443,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select" name="gender">
+                  <select className="form-select" name="gender" onChange={handleInput}>
                     <option>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -394,7 +451,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-6">
-                  <select className="form-select" name="ethnicity">
+                  <select className="form-select" name="ethnicity" onChange={handleInput}>
                     <option>Ethnicity</option>
                     <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
                     <option value="Asian">Asian</option>
@@ -405,7 +462,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" name="dating">
+                  <select className="form-select" name="dating" onChange={handleInput}>
                     <option>Dating Period</option>
                     <option value="1 Month">1 Month</option>
                     <option value="3 Months">3 Months</option>
@@ -418,7 +475,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="col-md-6">
-                  <select className="form-select" name="age">
+                  <select className="form-select" name="age" onChange={handleInput}>
                     <option>Age</option>
                     <option value="18 - 25">18 - 25</option>
                     <option value="25 - 30">25 - 30</option>
@@ -433,7 +490,46 @@ export default function Home() {
             </div>
           </div>
 
-         
+          {/* Table */}
+
+          <div>
+            <table className={`table table-hover ${isEmpty ? 'hide' : ''}`}>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Alert Type</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Ethnicity</th>
+                  <th scope="col">Dating</th>
+                  <th scope="col">Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                {responseData ? (
+                  responseData.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.name}</td>
+                      <td>{item.country}</td>
+                      <td>{item.alertType}</td>
+                      <td>{item.gender}</td>
+                      <td>{item.ethnicity}</td>
+                      <td>{item.dating}</td>
+                      <td>{item.age}</td>
+                    </tr>
+                  ))
+                ) : (
+                  message && (
+                    <tr>
+                      <td colSpan="6" className="notFound">{message}</td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+            {isEmpty && <p className="notFound">{message}</p>}
+          </div>
+
         </div>
       </section>
 
