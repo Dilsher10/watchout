@@ -34,5 +34,38 @@ const read = async (req, res) => {
 };
 
 
+// Search
 
-module.exports = { post, read};    
+const search = async (req, res) => {
+    try {
+        const { country, alertType, gender, ethnicity, dating, age } = req.body;
+        let ageFilter = {};
+        if (age) {
+            const [minAge, maxAge] = age.split(' - ');
+            ageFilter = {
+                age: {
+                    $gte: parseInt(minAge),
+                    $lte: parseInt(maxAge)
+                }
+            };
+        }
+        const filters = {
+            ...(country && { country }),
+            ...(alertType && { alertType }),
+            ...(gender && { gender }),
+            ...(ethnicity && { ethnicity }),
+            ...(dating && { dating }),
+            ...ageFilter
+        };
+        const alerts = await Post.find(filters);
+        if (alerts.length === 0) {
+            res.status(404).json({ message: "Record not found" });
+        } else {
+            res.json(alerts);
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+module.exports = { post, read, search};    
