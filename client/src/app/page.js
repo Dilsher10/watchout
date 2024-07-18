@@ -530,7 +530,6 @@ export default function Home() {
             </table>
             {isEmpty && <p className="notFound">{message}</p>}
           </div>
-
         </div>
       </section>
 
