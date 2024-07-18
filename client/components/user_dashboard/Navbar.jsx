@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand navbar-light sticky-top px-4 py-0" id="adminNavbar">
-                <Link href="/" className="siteName">WatchoutAlert</Link>
+                <Link href="/" className="siteName">Go to Home</Link>
                 <div className="navbar-nav align-items-center ms-auto">
                     <div className="nav-item dropdown">
                         <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">

@@ -1722,10 +1722,10 @@ footer .followList li .followLink {
 
 .siteName {
   color: #fff;
-  text-decoration: none !important;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.4px;
-  font-size: 20px;
+  font-size: 19px;
+  text-underline-offset: 5px !important;
 }
 
 

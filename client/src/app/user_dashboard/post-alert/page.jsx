@@ -155,7 +155,7 @@ const Page = () => {
                                             </div>
                                         </div>
                                         <div className="mt-4">
-                                            <button type="submit" className="btn btn-primary">Submit</button>
+                                            <button type="submit" className="btn btn-primary px-5 py-2">Submit</button>
                                         </div>
                                     </form>
                                 </div>
