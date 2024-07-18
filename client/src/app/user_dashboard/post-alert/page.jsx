@@ -123,7 +123,7 @@ const Page = () => {
                                                     <option value="More than 5 Years">More than 5 Years</option>
                                                 </select>
                                             </div>
-                                            <div className="col-12 my-3">
+                                            <div className="col-6">
                                                 <label className="form-label">Alert Type</label>
                                                 <select className="form-select" onChange={(e) => setAlertType(e.target.value)}>
                                                     <option selected>Select Alert Type</option>
@@ -134,9 +134,8 @@ const Page = () => {
                                                     <option value="Gold Digger">Gold Digger</option>
                                                     <option value="Toxic">Toxic</option>
                                                 </select>
-                                            </div>
-                                            <div className="col-6">
-                                                <label className="form-label">Ethnicity</label>
+
+                                                <label className="form-label my-2">Ethnicity</label>
                                                 <select className="form-select" onChange={(e) => setEthnicity(e.target.value)}>
                                                     <option selected>Select Ethnicity</option>
                                                     <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
@@ -146,17 +145,16 @@ const Page = () => {
                                                     <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
                                                     <option value="White">White</option>
                                                 </select>
-                                            </div>
-                                            <div className="col-6">
-                                                <label className="form-label">Nationality</label>
+
+                                                <label className="form-label my-2">Nationality</label>
                                                 <input type="text" className="form-control" placeholder='Enter nationality' onChange={(e) => setNationality(e.target.value)} />
                                             </div>
-                                            <div className="col-12">
-                                                <label for="exampleFormControlTextarea1" className="form-label">Description Box (100 characters)</label>
-                                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="6" placeholder='Type here...' onChange={(e) => setDescription(e.target.value)}></textarea>
+                                            <div className="col-6">
+                                                <label for="exampleFormControlTextarea1" className="form-label my-2">Description Box (100 characters)</label>
+                                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="7" placeholder='Type here...' onChange={(e) => setDescription(e.target.value)}></textarea>
                                             </div>
                                         </div>
-                                        <div className="mt-5">
+                                        <div className="mt-4">
                                             <button type="submit" className="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
