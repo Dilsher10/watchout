@@ -493,54 +493,6 @@ export default function Home() {
 
           {/* Table */}
 
-          {/* {responseData ? (
-            <table className="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">Country</th>
-                  <th scope="col">Alert Type</th>
-                  <th scope="col">Gender</th>
-                  <th scope="col">Ethnicity</th>
-                  <th scope="col">Dating</th>
-                  <th scope="col">Age</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{responseData.country}</td>
-                  <td>{responseData.alertType}</td>
-                  <td>{responseData.gender}</td>
-                  <td>{responseData.ethnicity}</td>
-                  <td>{responseData.dating}</td>
-                  <td>{responseData.age}</td>
-                </tr>
-              </tbody>
-            </table>
-          ) : (
-            message && (
-              <table className="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Country</th>
-                    <th scope="col">Alert Type</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Ethnicity</th>
-                    <th scope="col">Dating</th>
-                    <th scope="col">Age</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colSpan="6" className="notFound">{message}</td>
-                  </tr>
-                </tbody>
-              </table>
-            )
-          )} */}
-
-
-
-
           <div>
             <table className={`table table-hover ${isEmpty ? 'hide' : ''}`}>
               <thead>
