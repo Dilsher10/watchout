@@ -18,6 +18,7 @@ export default function Home() {
 
   const [hoveredCountry, setHoveredCountry] = useState(null);
 
+
   const handleMouseEnter = (country) => {
     setHoveredCountry(country);
   };
@@ -52,8 +53,10 @@ export default function Home() {
     age: "",
   })
 
-  const [responseData, setResponseData] = useState(null);
+  const [responseData, setResponseData] = useState([]);
   const [message, setMessage] = useState("");
+
+  const isEmpty = !responseData || responseData.length === 0;
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -80,19 +83,14 @@ export default function Home() {
         const res_data = await response.json();
         setUser({ country: "", alertType: "", gender: "", ethnicity: "", dating: "", age: "" });
         if (res_data.length > 0) {
-          const firstItem = res_data[0];
-          setResponseData({
-            country: firstItem.country || "",
-            alertType: firstItem.alertType || "",
-            gender: firstItem.gender || "",
-            ethnicity: firstItem.ethnicity || "",
-            dating: firstItem.dating || "",
-            age: firstItem.age || ""
-          });
+          setResponseData(res_data);
+        } else {
+          setResponseData([]);
+          setMessage("Record not found");
         }
       } else {
-        setResponseData(null); // Clear response data
-        setMessage("Record not found"); // Set state to show the message
+        setResponseData(null);
+        setMessage("Record not found");
       }
     } catch (error) {
       console.log(error);
@@ -495,7 +493,7 @@ export default function Home() {
 
           {/* Table */}
 
-          {responseData ? (
+          {/* {responseData ? (
             <table className="table table-hover">
               <thead>
                 <tr>
@@ -538,7 +536,49 @@ export default function Home() {
                 </tbody>
               </table>
             )
-          )}
+          )} */}
+
+
+
+
+          <div>
+            <table className={`table table-hover ${isEmpty ? 'hide' : ''}`}>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Alert Type</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Ethnicity</th>
+                  <th scope="col">Dating</th>
+                  <th scope="col">Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                {responseData ? (
+                  responseData.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.name}</td>
+                      <td>{item.country}</td>
+                      <td>{item.alertType}</td>
+                      <td>{item.gender}</td>
+                      <td>{item.ethnicity}</td>
+                      <td>{item.dating}</td>
+                      <td>{item.age}</td>
+                    </tr>
+                  ))
+                ) : (
+                  message && (
+                    <tr>
+                      <td colSpan="6" className="notFound">{message}</td>
+                    </tr>
+                  )
+                )}
+              </tbody>
+            </table>
+            {isEmpty && <p className="notFound">{message}</p>}
+          </div>
+
         </div>
       </section>
 

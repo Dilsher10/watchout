@@ -502,6 +502,23 @@ header .img-fluid {
   padding: 40px;
 }
 
+.hide {
+  display: none;
+}
+
+.formSec .notFound {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px;
+  letter-spacing: 1px;
+  background: #fff;
+}
+
+.formSec .notFound:empty{
+  display: none !important;
+}
+
 .formSec .form-select {
   background-color: #DF314D !important;
   border: 0;
