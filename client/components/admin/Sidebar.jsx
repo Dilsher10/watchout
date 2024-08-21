@@ -5,6 +5,10 @@ import { FaLaptop } from 'react-icons/fa';
 import { FaTh } from 'react-icons/fa';
 import { FaKeyboard } from 'react-icons/fa';
 import { FaTable } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
+import { FaEye } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
+import { FaBook } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Sidebar = () => {
@@ -36,7 +40,14 @@ const Sidebar = () => {
             <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>Post Management</span></Link>
             <Link href="/admin/subscription_management" className="nav-item nav-link"><div className="iconBox"><FaKeyboard className='sidebarIcon' /></div><span>Subcription Management</span></Link>
             <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTable className='sidebarIcon' /></div><span>Static Content Management</span></Link>
-            <Link href="/admin/reviews" className="nav-item nav-link"><div className="iconBox"><FaTable className='sidebarIcon' /></div><span>Reviews</span></Link>
+            <Link href="/admin/reviews" className="nav-item nav-link"><div className="iconBox"><FaEdit className='sidebarIcon' /></div><span>Reviews</span></Link>
+            <div className="nav-item dropdown">
+              <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><div className="iconBox"><FaBook className='sidebarIcon' /></div><span>Blogs</span></Link>
+              <div className="dropdown-menu bg-transparent border-0">
+                <Link href="/admin/add-blog/" className="dropdown-item"><FaPlus /> Add</Link>
+                <Link href="/admin/view-blog/" className="dropdown-item"><FaEye /> View</Link>
+              </div>
+            </div>
           </div>
         </nav>
       </div>

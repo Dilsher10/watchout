@@ -73,11 +73,12 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 280px;
+    width: 300px;
     height: 100vh;
     background: var(--light);
     transition: 0.5s;
     z-index: 999;
+    overflow: scroll;
 }
 
 .content {

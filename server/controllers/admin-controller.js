@@ -1,5 +1,6 @@
 const Admin = require("../models/admin-model");
 const Review = require("../models/review-model");
+const Blog = require("../models/blog-model");
 
 
 
@@ -94,4 +95,17 @@ const approveReview = async (req, res) => {
 
 
 
-module.exports = { register, login, read, viewReview, approveReview };
+const addBlog = async (req, res) => {
+    try {
+        const { title, description } = req.body;
+        await Blog.create({ image: req.file.filename, title, description });
+        res.status(200).json({ message: "Blog Added Successfully" });
+    } catch (error) {
+        res.status(500).json("internal server error");
+    }
+};
+
+
+
+
+module.exports = { register, login, read, viewReview, approveReview, addBlog };

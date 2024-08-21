@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../../../../components/user_dashboard/Sidebar';
 import Navbar from '../../../../components/user_dashboard/Navbar';
 import Footer from '../../../../components/user_dashboard/Footer';
