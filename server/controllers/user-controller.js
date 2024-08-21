@@ -27,7 +27,7 @@ const register = async (req, res) => {
             theme: "default",
             product: {
                 name: "Watchout Alert",
-                link: 'https://watchout.yourdemolink.com/'
+                link: 'https://watchoutalert.com/'
             }
         });
 
@@ -90,13 +90,14 @@ const verifyAccount = async (req, res) => {
 const login = async (req, res) => {
     try {
         const { email, password } = req.body;
-        
+
         const userExist = await User.findOne({ email });
-        
+
         if (userExist) {
             if (userExist.isVerified) {
                 if (password === userExist.password) {
                     const token = await userExist.generateToken();
+
                     res.status(200).json({ message: "Login Successful", token, userId: userExist._id.toString() });
                 } else {
                     res.status(401).json({ error: "Invalid Password" });
@@ -202,6 +203,18 @@ const resetPassword = async (req, res) => {
 }
 
 
+// Read All Users
+
+const read = async (req, res) => {
+    try {
+        const user = await User.find({ isVerified: true });
+        res.send(user);
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
 
 
-module.exports = { register, login, forgotPassword, resetPassword, verifyAccount }
+
+
+module.exports = { register, login, forgotPassword, resetPassword, verifyAccount, read }

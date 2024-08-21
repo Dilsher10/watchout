@@ -36,7 +36,7 @@ const Page = () => {
                         <div className="card">
                             <img src="/blog-1.png" className="card-img-top" alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">Balancing Acts</h5>
+                                <h5 className="card-title">How to Avoid Toxic Relationships</h5>
                                 <p className="card-text">Self-Care in Relationships</p>
                                 <img src="/icons.png" alt=""/>
                                 <a href="#" className="btn btn-primary">Read More</a>
@@ -45,7 +45,7 @@ const Page = () => {
                         <div className="card">
                             <img src="/blog-2.png" alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">Steering Love in the Digital Era</h5>
+                                <h5 className="card-title">Exiting A Toxic Relationship</h5>
                                 <p className="card-text">Dating Challenges and Triumphs</p>
                                 <img src="/icons.png" alt="" />
                                 <a href="#" className="btn btn-primary">Read More</a>
@@ -63,7 +63,7 @@ const Page = () => {
                         <div className="card">
                             <img src="/blog-1.png" className="card-img-top" alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">Dating In Digital Age</h5>
+                                <h5 className="card-title">Using WatchOut Alert to Avoid Toxic People</h5>
                                 <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy.</p>
                                 <img src="/icons.png" alt="" />
                                 <a href="#" className="btn btn-primary">Read More</a>
@@ -74,7 +74,7 @@ const Page = () => {
                         <div className="card">
                             <img src="/blog-2.png" className="card-img-top" alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">Dating In Digital Age</h5>
+                                <h5 className="card-title">Dating in Digital Age</h5>
                                 <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy.</p>
                                 <img src="/icons.png" alt="" />
                                 <a href="#" className="btn btn-primary">Read More</a>
@@ -85,7 +85,7 @@ const Page = () => {
                         <div className="card">
                             <img src="/blog-3.png" className="card-img-top" alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">Dating In Digital Age</h5>
+                                <h5 className="card-title">Self Care and Healing</h5>
                                 <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry dummy.</p>
                                 <img src="/icons.png" alt=""/>
                                 <a href="#" className="btn btn-primary">Read More</a>
@@ -106,7 +106,7 @@ const Page = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">Dating In Digital Age</h5>
+                                        <h5 className="card-title">How to Avoid Toxic Relationships</h5>
                                         <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                                         <img src="/icons.png" alt="" />
                                         <a href="#" className="btn btn-primary">Read More</a>
@@ -121,7 +121,7 @@ const Page = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">Dating In Digital Age</h5>
+                                        <h5 className="card-title">Exiting A Toxic Relationship</h5>
                                         <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                                         <img src="/icons.png" alt="" />
                                         <a href="#" className="btn btn-primary">Read More</a>
@@ -136,7 +136,7 @@ const Page = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">Dating In Digital Age</h5>
+                                        <h5 className="card-title">Using WatchOut Alert to Avoid Toxic People</h5>
                                         <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                                         <img src="/icons.png" alt="" />
                                         <a href="#" className="btn btn-primary">Read More</a>
@@ -148,7 +148,7 @@ const Page = () => {
                     <div className="col-sm-12 col-md-6 col-lg-6">
                         <div className='content'>
                             <img src="/b-1.png" className="img-fluid" alt="" />
-                            <span>Self Care & Relationship</span>
+                            <span>Dating in Digital Age</span>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
                             <p className='mb-4'>minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip suscipit lobortis nisl ut aliquip ex ea commodo.</p>
                             <img src="/icons.png" alt="" />

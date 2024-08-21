@@ -80,7 +80,7 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>Watchout has been a game-changer in my dating life. The customizable alerts allowed me to set my safety parameters, and the app's guidance has been invaluable. It's like having a personal safety advisor in my pocket.</p>
+                                <p>WatchOut Alert has been a game-changer in my dating life. The customizable alerts allowed me to set my safety parameters, and the app's guidance has been invaluable. It's like having a personal safety advisor in my pocket.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">
@@ -103,7 +103,7 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>Using Watchout has made me feel more in control while dating. The range of alerts and advice helped me make informed decisions, and I feel much more confident navigating the complexities of relationships.</p>
+                                <p>Using WatchOut Alert has made me feel more in control while dating. The range of alerts and advice helped me make informed decisions, and I feel much more confident navigating the complexities of relationships.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">
@@ -126,7 +126,7 @@ const TestimonialSlider = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <p>I rely on Watchout for every date now. Being able to tailor alerts based on location and warning labels gives me peace of mind. It's a vital tool for anyone looking to date more safely.</p>
+                                <p>I rely on WatchOut Alert for every date now. Being able to tailor alerts based on location and warning labels gives me peace of mind. It's a vital tool for anyone looking to date more safely.</p>
                                 <button className='btn'>Submit</button>
                             </div>
                             <div className="dpp-img">

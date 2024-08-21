@@ -40,10 +40,23 @@ const Navbar = () => {
                                     <ul className="dropdown-menu">
                                         <li><Link className="dropdown-item" href="#">Cheating</Link></li>
                                         <li><Link className="dropdown-item" href="#">Harassment</Link></li>
-                                        <li><Link className="dropdown-item" href="#">Physical Abuse</Link></li>
                                         <li><Link className="dropdown-item" href="#">Play Boy/Girl</Link></li>
                                         <li><Link className="dropdown-item" href="#">Gold Digger</Link></li>
                                         <li><Link className="dropdown-item" href="#">Toxic</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Control and Possessiveness</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Isolation</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Verbal and Emotional Abuse</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Physical/Mental Abuse</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Financial Control</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Narcissism</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Infidelity and Betrayal</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Manipulation and Deception</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Stonewalling</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Jealousy and Insecurity</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Lack of Respect</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Addiction and Substance Abuse</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Passive-Aggressive Behavior</Link></li>
+                                        <li><Link className="dropdown-item" href="#">Dependence and Co-Dependence</Link></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item">
@@ -64,8 +77,8 @@ const Navbar = () => {
                                     <Link href="/user_dashboard/" className="btn btn-outline-success" id='btn-1'>My Account</Link>
                                 ) : (
                                     <>
-                                        <Link href="/user_dashboard/login" className="btn btn-outline-success" id='btn-1'>Login</Link>
-                                        <button type='button' className='btn btn-outline-success' id='btn-2' data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                                        <Link href="/user_dashboard/login" className="btn btn-outline-success" id='btn-1'>Log In</Link>
+                                        <button type='button' className='btn btn-outline-success' id='btn-2' data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
                                     </>
                                 )}
                             </form>

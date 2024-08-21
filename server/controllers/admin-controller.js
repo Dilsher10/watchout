@@ -1,4 +1,5 @@
 const Admin = require("../models/admin-model");
+const Review = require("../models/review-model");
 
 
 
@@ -45,4 +46,52 @@ const login = async (req, res) => {
 }
 
 
-module.exports = { register, login };
+// Reviews
+
+const read = async (req, res) => {
+    try {
+        const reviewData = await Review.find({});
+        res.send(reviewData);
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
+
+
+// View Review
+
+const viewReview = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const reviewData = await Review.findOne({ _id: id });
+        res.send(reviewData);
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
+
+
+
+// Approve Review
+
+const approveReview = async (req, res) => {
+    try {
+        const user = await Review.findOne({ _id: req.params.id });
+
+        if (!user) {
+            return res.status(404).send({ code: 404, message: 'Data not found or already verified' });
+        }
+
+        await Review.updateOne({ _id: user._id }, { isVerified: true });
+        await user.save();
+        res.send({ code: 200, message: 'Review Approved Successfully' });
+    } catch (error) {
+        console.error('Error updating data:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+}
+
+
+
+
+module.exports = { register, login, read, viewReview, approveReview };

@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css'
 import './admin.css'
 import { ToastContainer } from 'react-toastify';

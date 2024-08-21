@@ -18,6 +18,10 @@ export default function Home() {
 
   const [hoveredCountry, setHoveredCountry] = useState(null);
 
+  const [reviewData, setReviewData] = useState([]);
+
+  const [userData, setUserData] = useState([]);
+
 
   const handleMouseEnter = (country) => {
     setHoveredCountry(country);
@@ -38,6 +42,38 @@ export default function Home() {
     if (token) {
       setIsAuthenticated(true);
     }
+
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/user/reviews/`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setReviewData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+
+
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/user/users/`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setUserData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchUser();
 
   }, []);
 
@@ -97,6 +133,9 @@ export default function Home() {
     }
   };
 
+  const reviewCount = reviewData.length;
+  const userCount = userData.length;
+
   return (
     <>
       <Topbar />
@@ -109,8 +148,8 @@ export default function Home() {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h1>STOP DATING BLINDLY</h1>
-              <h3>Before Dating Watchout</h3>
-              <p>Are you tired of swiping left or right, hoping to be matched with that special person only to find in the end that the individual who you started to grow close to and began to trust was there to manipulate and exploit you?  At Watchout Alert, we are on a mission to revolutionize the dating scene in addition to relationships overall by empowering you with the knowledge and tools you need to protect yourself against individuals whose sole purpose is to run game by being misleading, fake and phony!</p>
+              <h3>Before Dating WatchOut Alert</h3>
+              <p>Are you tired of swiping left or right, hoping to be matched with that special person only to find in the end that the individual who you started to grow close to and began to trust was there to manipulate and exploit you?  At WatchOut Alert, we are on a mission to revolutionize the dating scene in addition to relationships overall by empowering you with the knowledge and tools you need to protect yourself against individuals whose sole purpose is to run game by being misleading, fake and phony!</p>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
               <img src="/home-1.png" className="img-fluid" alt="" />
@@ -129,8 +168,12 @@ export default function Home() {
               <div className="card">
                 <img src="/star.png" className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title">Review</h5>
-                  <h5 className="card-title">322K+</h5>
+                  <h5 className="card-title">Reviews</h5>
+                  {reviewCount > 0 ? (
+                    <h5 className="card-title">{reviewCount}+</h5>
+                  ) : (
+                    <h5 className="card-title">0</h5>
+                  )}
                 </div>
               </div>
             </div>
@@ -139,7 +182,11 @@ export default function Home() {
                 <img src="/sticker.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Happy Users</h5>
-                  <h5 className="card-title">47K+</h5>
+                  {userCount > 0 ? (
+                    <h5 className="card-title">{userCount}+</h5>
+                  ) : (
+                    <h5 className="card-title">0</h5>
+                  )}
                 </div>
               </div>
             </div>
@@ -167,7 +214,7 @@ export default function Home() {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h1>Simple & Quick Alert System! </h1>
-              <p>Submitting or viewing alerts has never been easier. Our user-friendly interface ensures a smooth experience, allowing you to swiftly submit any concerns or browse through alerts with just a few clicks. Whether you're reporting suspicious activity or staying updated on potential risks, our system streamlines the process, keeping you informed and vigilant. Stay ahead of the curve and maintain your safety effortlessly with our intuitive alert system.</p>
+              <p>Submitting or viewing alerts has never been easier. Our user-friendly interface ensures a smooth experience, allowing you to swiftly submit any concerns or browse through alerts with just a few clicks. Whether you are reporting or staying aware of toxic individuals, our system streamlines the process, keeping you informed and vigilant. Stay alert and maintain your safety effortlessly with the WatchOut Alert system.</p>
               {isAuthenticated ? (
                 <>
                   <Link href="/user_dashboard/post-alert" className='btn-2'>Submit Alert</Link>
@@ -189,14 +236,14 @@ export default function Home() {
 
 
       <div className="container processSec" data-aos="fade-up">
-        <h1 className="mb-5">Watchout Alert Steps</h1>
+        <h1 className="mb-5">WatchOut Alert Steps</h1>
         <div className="row">
           <div className="col">
             <div className="card" data-bs-toggle="modal" data-bs-target="#signupModal">
               <img src="/process-1.png" className="img-fluid" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Create an<br /> Account</h5>
-                <p>Join Watchout for a secure dating journey. Set up your profile and access a vigilant community dedicated to safety.</p>
+                <p>Join WatchOut for a secure dating journey. Set up your profile and access a vigilant community dedicated to safety.</p>
               </div>
             </div>
           </div>
@@ -211,11 +258,11 @@ export default function Home() {
               <div className="card-body">
                 {isAuthenticated ? (
                   <>
-                    <Link href="/user_dashboard/view-alert" className="card-title">Watchout <br /> Alerts</Link>
+                    <Link href="/user_dashboard/view-alert" className="card-title">WatchOut <br /> Alerts</Link>
                   </>
                 ) : (
                   <>
-                    <Link href="/user_dashboard/login" className="card-title">Watchout <br /> Alerts</Link>
+                    <Link href="/user_dashboard/login" className="card-title">WatchOut <br /> Alerts</Link>
                   </>
                 )}
                 <p>Stay updated on dating risks with real-time alerts. Contribute to a safer environment by staying informed.</p>
@@ -271,7 +318,7 @@ export default function Home() {
                   <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title">Communication is Key</h5>
-                      <p className="card-text">Effective communication lays the foundation for a healthy relationship. Watchout for partners who dodge important conversations, exhibit controlling behavior, or refuse to listen to your needs and feelings.</p>
+                      <p className="card-text">Effective communication lays the foundation for a healthy relationship. WatchOut for partners who dodge important conversations, exhibit controlling behavior, or refuse to listen to your needs and feelings.</p>
                     </div>
                   </div>
                 </div>
@@ -547,7 +594,7 @@ export default function Home() {
 
       <section className="blogSec" data-aos="fade-up">
         <div className="container">
-          <h1>Watchout Blogs</h1>
+          <h1>WatchOut Blogs</h1>
           <BlogSlider />
         </div>
       </section>

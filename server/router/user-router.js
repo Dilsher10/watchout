@@ -33,4 +33,9 @@ router.route('/user/reset-password').post(userControllers.resetPassword);
 
 router.route('/user/verify-account').post(userControllers.verifyAccount);
 
+
+// All Users
+
+router.route('/user/users').get(userControllers.read);
+
 module.exports = router;

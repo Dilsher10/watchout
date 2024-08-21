@@ -67,7 +67,7 @@ const Page = () => {
                         <form onSubmit={handleSubmit}>
                             <div className="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                                 <div className="mb-3">
-                                    <h3>Admin Login</h3>
+                                    <h3>Admin Log In</h3>
                                 </div>
                                 <div className="form-floating mb-3">
                                     <input type="email" name='email' className="form-control" id="floatingInput" placeholder="name@example.com" onChange={handleInput} />
@@ -84,7 +84,7 @@ const Page = () => {
                                     </div>
                                     <Link href="#">Forgot Password</Link>
                                 </div>
-                                <button type="submit" className="btn login-btn">Log in</button>
+                                <button type="submit" className="btn login-btn">Log In</button>
                             </div>
                         </form>
                     </div>

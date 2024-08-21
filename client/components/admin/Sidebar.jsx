@@ -36,6 +36,7 @@ const Sidebar = () => {
             <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>Post Management</span></Link>
             <Link href="/admin/subscription_management" className="nav-item nav-link"><div className="iconBox"><FaKeyboard className='sidebarIcon' /></div><span>Subcription Management</span></Link>
             <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTable className='sidebarIcon' /></div><span>Static Content Management</span></Link>
+            <Link href="/admin/reviews" className="nav-item nav-link"><div className="iconBox"><FaTable className='sidebarIcon' /></div><span>Reviews</span></Link>
           </div>
         </nav>
       </div>

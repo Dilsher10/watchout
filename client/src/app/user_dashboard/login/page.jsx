@@ -76,7 +76,7 @@ const Page = () => {
                         <form onSubmit={handleSubmit}>
                             <div className="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                                 <div className="mb-3">
-                                    <h3>User Login</h3>
+                                    <h3>User Log In</h3>
                                 </div>
                                 <div className="form-floating mb-3">
                                     <input type="email" name='email' className="form-control" id="floatingInput" placeholder="name@example.com" onChange={handleInput} required/>
@@ -96,10 +96,10 @@ const Page = () => {
                                     </div>
                                     <Link href="/user_dashboard/forgot-password">Forgot Password</Link>
                                 </div>
-                                <button type="submit" className="btn login-btn">Log in</button>
+                                <button type="submit" className="btn login-btn">Log In</button>
                                 <div className="d-flex align-items-center justify-content-between mt-4">
-                                    <label className="form-check-label" htmlFor="exampleCheck1">Not account yet ?</label>
-                                    <Link href="/">Signup Now</Link>
+                                    <label className="form-check-label" htmlFor="exampleCheck1">No Account Yet?</label>
+                                    <Link href="/">Sign Up Now</Link>
                                 </div>
                             </div>
                         </form>

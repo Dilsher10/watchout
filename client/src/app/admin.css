@@ -200,8 +200,8 @@
 
 .sidebar .navbar .dropdown-toggle::after {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 25px;
+    right: 20px;
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -216,6 +216,7 @@
 .sidebar .navbar .dropdown-item {
     padding-left: 25px;
     border-radius: 0 30px 30px 0;
+    letter-spacing: 0.4px;
 }
 
 .content .navbar .navbar-nav .nav-link {
@@ -377,7 +378,6 @@
 
 .dropdown-menu {
     margin-top: 3px !important;
-    width: 80% !important;
     background-color: #252645 !important;
 }
 
@@ -626,7 +626,7 @@
     margin-bottom: 20px;
     color: #111;
     font-weight: 500;
-    font-family:serif;
+    font-family: serif;
 }
 
 .pricing-card p {
@@ -652,4 +652,34 @@
 
 .pricing-card:hover {
     transform: translateY(-10px);
+}
+
+
+
+#adminNavbar .required {
+    color: red;
+}
+
+#adminNavbar .optional {
+    color: #777;
+    font-size: 14px;
+}
+
+button[disabled=disabled],
+button:disabled {
+    border: 1px solid #999999 !important;
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    pointer-events:all !important;
+}
+
+.review{
+    background-color: #fff;
+    padding: 30px 30px;
+    margin: 30px auto;
+}
+
+.review h5{
+    margin-bottom: 20px;
 }

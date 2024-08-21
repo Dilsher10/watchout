@@ -29,7 +29,7 @@ const About = () => {
                             <p>At our core, we're passionate about promoting meaningful connections and empowering individuals within relationships. Our platform is a culmination of expertise and dedication, striving to steer the ever-evolving setting of modern relationships. Through perceptive content, supportive resources, and a community-driven approach, we aim to inspire, educate, and support individuals in their life toward fulfilling and thriving relationships.</p>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-6">
-                            <h1>We Care About Relation</h1>
+                            <h1>We Care About Relationships</h1>
                             <p>Our mission is centered on cultivating healthy and fulfilling connections. We believe in the power of empathy, communication, and trust as the pillars of strong relationships. Our platform celebrates diversity, encouraging the growth and evolution of partnerships while offering support and guidance to direct the complexities of modern relationships.</p>
                             <ul>
                                 <li><img src="/icon.png" alt=""/> Prioritize Empathy</li>

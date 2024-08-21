@@ -2,62 +2,49 @@ const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
     name: {
-        type: String,
-        required: true,
+        type: String
     },
     image: {
-        type: String,
-        required: true,
+        type: String
     },
     gender: {
-        type: String,
-        required: true,
+        type: String
     },
     dob: {
-        type: String,
-        required: true,
+        type: String
     },
     age: {
         type: String
     },
     city: {
-        type: String,
-        required: true,
+        type: String
     },
     state: {
-        type: String,
-        required: true,
+        type: String
     },
     country: {
-        type: String,
-        required: true,
+        type: String
     },
     phone: {
-        type: String,
-        required: true,
+        type: String
     },
     email: {
-        type: String,
-        required: true,
+        type: String
     },
     dating: {
-        type: String,
-        required: true,
+        type: String
     },
     alertType: {
         type: String
     },
     ethnicity: {
-        type: String,
-        required: true,
+        type: String
     },
     nationality: {
-        type: String,
-        required: true,
+        type: String
     },
     description: {
-        type: String,
-        required: true,
+        type: String
     }
 },{
     timestamps: true,

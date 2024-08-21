@@ -60,7 +60,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Journeys of Heartbreak: Stories Shared on Watchout</p>
+                                            <p className="card-text">Journeys of Heartbreak: Stories Shared on WatchOut Alert</p>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Peeling Back the Layers: Exploring Watchout's Alert Narratives</p>
+                                            <p className="card-text">Peeling Back the Layers: Exploring WatchOut Alert's Narratives</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">From Deceit to Strength: Genuine Tales on Watchout</p>
+                                            <p className="card-text">From Deceit to Strength: Genuine Tales on WatchOut Alert</p>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Lessons in Love and Loss: Echoes from Watchout</p>
+                                            <p className="card-text">Lessons in Love and Loss: Echoes from WatchOut Alert</p>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@ const Footer = () => {
                                     </div>
                                     <div className="col-md-11">
                                         <div className="card-body">
-                                            <p className="card-text">Revealing Fraud: Insider Stories from Watchout's Community</p>
+                                            <p className="card-text">Revealing Fraud: Insider Stories from WatchOut Alert's Community</p>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@ const Footer = () => {
 
                     <div className="row">
                         <div className="col">
-                            <p className='bottomText-1'>@Copyright 2024 By Watchout Alert</p>
+                            <p className='bottomText-1'>@Copyright 2024 By WatchOut Alert</p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ const Footer = () => {
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="signupModalLabel">User Signup</h1>
+                            <h1 className="modal-title fs-5" id="signupModalLabel">User Sign Up</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">

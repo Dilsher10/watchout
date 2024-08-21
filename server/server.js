@@ -5,6 +5,7 @@ const userRouter = require('./router/user-router');
 const adminRouter = require('./router/admin-router');
 const postRouter = require('./router/post-router');
 const planRouter = require('./router/plan-router');
+const reviewRouter = require('./router/review-router');
 
 const cors = require('cors');
 
@@ -18,7 +19,7 @@ app.use('/api/auth', userRouter);
 app.use('/api/auth', adminRouter);
 app.use('/api/auth', postRouter);
 app.use('/api/auth', planRouter);
-
+app.use('/api/auth', reviewRouter);
 
 connectDb().then(() => {
     app.listen(PORT, () => {
