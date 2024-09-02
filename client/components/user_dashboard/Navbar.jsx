@@ -1,18 +1,27 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify'
 
 const Navbar = () => {
 
-    useEffect(() => {
-        if (!localStorage.getItem('userId')) {
-            redirect('/user_dashboard/login');
-        }
+    const [userName, setUserName] = useState('');
+    const router = useRouter();
 
-    }, []);
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const storedUserId = localStorage.getItem('userId');
+            const storedUserName = localStorage.getItem('userName');
+
+            if (!storedUserId) {
+                router.push('/user_dashboard/login');
+            } else {
+                setUserName(storedUserName);
+            }
+        }
+    }, [router]);
 
     const userLogout = () => {
         localStorage.removeItem("token");
@@ -30,7 +39,7 @@ const Navbar = () => {
                     <div className="nav-item dropdown">
                         <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <Image className="rounded-circle me-lg-2" src="/admin/user.jpg" alt="" width={40} height={40} />
-                            {localStorage.getItem('userName')?.charAt(0).toUpperCase() + localStorage.getItem('userName')?.slice(1)}
+                            {userName && userName.charAt(0).toUpperCase() + userName.slice(1)}
                         </Link>
                         <div className="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <Link href="#" className="dropdown-item">My Profile</Link>
