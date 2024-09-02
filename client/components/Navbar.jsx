@@ -19,7 +19,7 @@ const Navbar = () => {
     }, []);
     return (
         <section className='navBar sticky-top'>
-            <div className="container">
+            <div className="container-fluid p-0">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                         <Link className="navbar-brand" href="/">

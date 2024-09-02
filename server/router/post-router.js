@@ -14,7 +14,7 @@ router.use(express.static('public'));
 
 const storage = multer.diskStorage({
     destination:function(req, file, cb){
-        cb(null,path.join(__dirname,'../public/posts'),function(error,success){
+        cb(null,path.join(__dirname,'../../client/public//posts'),function(error,success){
             if(error) throw error
         });
     },
@@ -34,6 +34,10 @@ const upload = multer({
 router.post('/user/post',upload.single('image'),postControllers.post);
 
 router.route('/user/view-post').get(postControllers.read);
+
+router.route('/user/read-alert/:id').get(postControllers.readSinglePost);
+
+router.route('/user/delete-alert/:id').delete(postControllers.deletePost);
 
 router.route('/user/search').post(postControllers.search);
 

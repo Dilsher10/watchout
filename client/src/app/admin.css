@@ -675,12 +675,18 @@ button:disabled {
     pointer-events:all !important;
 }
 
-.review{
+#adminNavbar .review{
     background-color: #fff;
     padding: 30px 30px;
     margin: 30px auto;
 }
 
-.review h5{
+#adminNavbar .review h5{
     margin-bottom: 20px;
+}
+
+
+#adminNavbar .review h5 span{
+    font-size: 17px !important;
+    font-weight: 400;
 }

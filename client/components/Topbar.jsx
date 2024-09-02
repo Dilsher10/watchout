@@ -7,8 +7,8 @@ const Topbar = () => {
         <section className='topBar'>
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-6">
-                        <div className="card">
+                    <div className="col-sm-12 col-md-6 col-lg-6 p-0">
+                        <div className="card p-0">
                             <div className="row g-0">
                                 <div className="col-md-1">
                                     <img src="/phone.png" className="img-fluid" alt="..."/>

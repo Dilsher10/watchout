@@ -7,6 +7,7 @@ import { FaChartBar } from 'react-icons/fa';
 import { FaFileAlt } from 'react-icons/fa';
 import { FaPlus } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
 import Link from 'next/link';
 
 const Sidebar = () => {
@@ -42,9 +43,9 @@ const Sidebar = () => {
           </div>
           <div className="navbar-nav w-100">
             <Link href="/user_dashboard" className="nav-item nav-link"><div className="iconBox"><FaTachometerAlt className='sidebarIcon' /></div><span>Dashboard</span></Link>
-            <Link href="/user_dashboard/post-alert" className="nav-item nav-link"><div className="iconBox"><FaLaptop className='sidebarIcon' /></div><span>Submit Alert</span></Link>
-            <Link href="/user_dashboard/view-alert" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>View Alerts</span></Link>
-            <Link href="/user_dashboard/update-plan" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>Update Plan</span></Link>
+            <Link href="/user_dashboard/post-alert" className="nav-item nav-link"><div className="iconBox"><FaLaptop className='sidebarIcon' /></div><span>Post Alert</span></Link>
+            <Link href="/user_dashboard/view-alerts" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>View Alerts</span></Link>
+            <Link href="/user_dashboard/update-plan" className="nav-item nav-link"><div className="iconBox"><FaBook className='sidebarIcon' /></div><span>Update Plan</span></Link>
             <div className="nav-item dropdown">
               <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><div className="iconBox"><FaChartBar className='sidebarIcon' /></div><span>Review</span></Link>
               <div className="dropdown-menu bg-transparent border-0">

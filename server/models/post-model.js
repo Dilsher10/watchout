@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
+    userId: {
+        type: String
+    },
     name: {
         type: String
     },
@@ -46,7 +49,7 @@ const postSchema = new mongoose.Schema({
     description: {
         type: String
     }
-},{
+}, {
     timestamps: true,
 })
 

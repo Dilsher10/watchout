@@ -31,7 +31,9 @@ const Page = () => {
     const postSubmit = async (e) => {
         e.preventDefault();
         try {
+            const userId = localStorage.getItem('userId');
             const formData = new FormData();
+            formData.append("userId", userId);
             formData.append("name", name);
             formData.append("image", image);
             formData.append("gender", gender);
@@ -70,11 +72,11 @@ const Page = () => {
                                         <div className="row">
                                             <div className="col-6">
                                                 <label htmlFor="">Full Name <span className='required'>*</span></label>
-                                                <input type="text" className="form-control" placeholder="Enter name" onChange={(e) => setName(e.target.value)} required/>
+                                                <input type="text" className="form-control" placeholder="Enter name" onChange={(e) => setName(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label htmlFor="">Picture <span className='required'>*</span></label>
-                                                <input type="file" className="form-control" accept="image/*" onChange={(e) => setImage(e.target.files[0])} required/>
+                                                <input type="file" className="form-control" accept="image/*" onChange={(e) => setImage(e.target.files[0])} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Gender <span className='required'>*</span></label>
@@ -87,11 +89,11 @@ const Page = () => {
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Date of Birth <span className='required'>*</span></label>
-                                                <input type="date" className="form-control" onChange={(e) => setDob(e.target.value)} required/>
+                                                <input type="date" className="form-control" onChange={(e) => setDob(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">City <span className='required'>*</span></label>
-                                                <input type="text" className="form-control" placeholder='Enter city' onChange={(e) => setCity(e.target.value)} required/>
+                                                <input type="text" className="form-control" placeholder='Enter city' onChange={(e) => setCity(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">State <span className='optional'>(optional)</span></label>
@@ -99,15 +101,15 @@ const Page = () => {
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Country <span className='required'>*</span></label>
-                                                <input type="text" className="form-control" placeholder='Enter country' onChange={(e) => setCountry(e.target.value)} required/>
+                                                <input type="text" className="form-control" placeholder='Enter country' onChange={(e) => setCountry(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Phone Number <span className='required'>*</span></label>
-                                                <input type="text" className="form-control" placeholder='Enter phone number' onChange={(e) => setPhone(e.target.value)} required/>
+                                                <input type="text" className="form-control" placeholder='Enter phone number' onChange={(e) => setPhone(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Email ID <span className='required'>*</span></label>
-                                                <input type="email" className="form-control" placeholder='Enter email id' onChange={(e) => setEmail(e.target.value)} required/>
+                                                <input type="email" className="form-control" placeholder='Enter email id' onChange={(e) => setEmail(e.target.value)} required />
                                             </div>
                                             <div className="col-6">
                                                 <label className="form-label">Dating Period <span className='required'>*</span></label>

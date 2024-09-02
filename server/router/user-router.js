@@ -38,4 +38,8 @@ router.route('/user/verify-account').post(userControllers.verifyAccount);
 
 router.route('/user/users').get(userControllers.read);
 
+// Read Single User
+
+router.route('/user/read-user/:id').get(userControllers.readSingleUser);
+
 module.exports = router;

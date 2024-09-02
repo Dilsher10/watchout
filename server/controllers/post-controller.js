@@ -5,13 +5,13 @@ const Post = require("../models/post-model");
 
 const post = async (req, res) => {
     try {
-        const { name, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description } = req.body;
+        const { userId, name, gender, dob, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description } = req.body;
 
         const today = new Date();
         const birthDate = new Date(dob);
         let age = today.getFullYear() - birthDate.getFullYear();
 
-        const userPosted = await Post.create({ name, image: req.file.filename, gender, dob, age, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description });
+        const userPosted = await Post.create({ userId, name, image: req.file.filename, gender, dob, age, city, state, country, phone, email, dating, alertType, ethnicity, nationality, description });
         if (userPosted) {
             res.status(201).json({ message: "Posted Successfully" });
         }
@@ -32,6 +32,35 @@ const read = async (req, res) => {
         res.status(500).json("internal server errorr");
     }
 };
+
+
+
+// Read Single Post
+
+const readSinglePost = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const postData = await Post.find({ _id: id });
+        res.send(postData);
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
+
+
+
+// Delete Post
+
+const deletePost = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const data = await Post.deleteOne({ _id: id });
+        res.send({ code: 200, message: "Alert deleted successfully", data: data })
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
+
 
 
 // Search
@@ -68,4 +97,4 @@ const search = async (req, res) => {
     }
 };
 
-module.exports = { post, read, search};    
+module.exports = { post, read, readSinglePost, deletePost, search };    

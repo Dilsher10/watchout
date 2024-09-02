@@ -48,6 +48,7 @@ const Page = () => {
                 const res_data = await response.json();
                 localStorage.setItem("token", res_data.token);
                 localStorage.setItem("userId", res_data.userId);
+                localStorage.setItem("userName", res_data.userName);
 
                 setUser({ email: "", password: "" });
                 toast.success("Login Successfully");

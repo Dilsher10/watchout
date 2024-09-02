@@ -18,9 +18,12 @@ const adminSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    otp: {
+        type: Number,
+    },
     isAdmin: {
         type: Boolean,
-        default: false,
+        default: true,
     }
 },{
     timestamps: true,
@@ -34,7 +37,7 @@ const adminSchema = new mongoose.Schema({
 adminSchema.methods.generateToken = async function () {
     try {
         return jwt.sign({
-            userId: this._id.toString(),
+            adminId: this._id.toString(),
             email: this.email,
             isAdmin: this.isAdmin,
         },

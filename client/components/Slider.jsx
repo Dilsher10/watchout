@@ -71,12 +71,9 @@ const Slider = () => {
                                 <p>After months of affectionate messages, he stepped up to help her with many financial needs.  But, his supposed partner disappeared, taking with her a significant sum of his hard-earned savings.  It turned out to be a heart-wrenching case of the “Sweetheart Swindler” leaving him emotionally shattered and financially drained.</p>
                                 <div className="card">
                                     <div className="row g-0">
-                                        <div className="col-md-1">
-                                            <img src="/testi-1.png" className="img-fluid rounded-start" alt="..." />
-                                        </div>
                                         <div className="col-md-5">
                                             <div className="card-body">
-                                                <h5 className="card-title">anna ken</h5>
+                                                <h5 className="card-title">William</h5>
                                                 <p className="card-text"><img src="/location.png" alt="" /> California</p>
                                             </div>
                                         </div>
@@ -93,13 +90,10 @@ const Slider = () => {
                                 <p>I was seeking partnership and connected deeply with Mark.  We painted a picturesque future together, expressing profound affection and commitment.  However, I soon realized I had fallen victim to a meticulously woven web of deceit.  What I thought was a blossoming romance turned out to be a fraudulent love trap.  The person I trusted wholeheartedly and frankly undeservedly had no genuine feelings.  It was a calculated ploy to emotionally manipulate me.  As the truth unraveled, I found myself emotionally torn which led to depression and panic attacks.  I started isolating myself because of embarrassment and eventually turned to therapy to heal and regain control over my life.  I believe I suffered a broken heart and would not wish this on my worst enemy!</p>
                                 <div className="card">
                                     <div className="row g-0">
-                                        <div className="col-md-1">
-                                            <img src="/testi-1.png" className="img-fluid rounded-start" alt="..." />
-                                        </div>
                                         <div className="col-md-5">
                                             <div className="card-body">
-                                                <h5 className="card-title">anna ken</h5>
-                                                <p className="card-text"><img src="/location.png" alt="" /> California</p>
+                                                <h5 className="card-title">Lily</h5>
+                                                <p className="card-text"><img src="/location.png" alt="" /> New York</p>
                                             </div>
                                         </div>
                                     </div>
@@ -117,13 +111,10 @@ const Slider = () => {
                                 <p>The person behind the screen was not who he claimed to be. His identity was fabricated, and his intentions were far from sincere, leaving me questioning everything I thought was real.</p>
                                 <div className="card pb-5">
                                     <div className="row g-0">
-                                        <div className="col-md-1">
-                                            <img src="/testi-1.png" className="img-fluid rounded-start" alt="..." />
-                                        </div>
                                         <div className="col-md-5">
                                             <div className="card-body">
-                                                <h5 className="card-title">anna ken</h5>
-                                                <p className="card-text"><img src="/location.png" alt="" /> California</p>
+                                                <h5 className="card-title">Jack</h5>
+                                                <p className="card-text"><img src="/location.png" alt="" /> Texas</p>
                                             </div>
                                         </div>
                                     </div>
@@ -139,13 +130,10 @@ const Slider = () => {
                                 <p>I was captivated by Harley who I met at a social gathering.  I felt comfortable because we had mutual acquaintances in common.  The more we talked and our relationship began to blossom, the more I began to notice inconsistencies in what he was saying and the red flags continued to grow.  After 6 months, the shocking truth was revealed that Harley was a married man with three children and was manipulating multiple women into believing he was single and in a committed relationship with them!  My trust was shattered and the revelation left me reeling with disbelief.</p>
                                 <div className="card">
                                     <div className="row g-0">
-                                        <div className="col-md-1">
-                                            <img src="/testi-1.png" className="img-fluid rounded-start" alt="..." />
-                                        </div>
                                         <div className="col-md-5">
                                             <div className="card-body">
-                                                <h5 className="card-title">anna ken</h5>
-                                                <p className="card-text"><img src="/location.png" alt="" /> California</p>
+                                                <h5 className="card-title">Daisy</h5>
+                                                <p className="card-text"><img src="/location.png" alt="" /> Florida</p>
                                             </div>
                                         </div>
                                     </div>

@@ -169,11 +169,12 @@ export default function Home() {
                 <img src="/star.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Reviews</h5>
-                  {reviewCount > 0 ? (
+                  <h5 className="card-title">1000+</h5>
+                  {/* {reviewCount > 0 ? (
                     <h5 className="card-title">{reviewCount}+</h5>
                   ) : (
                     <h5 className="card-title">0</h5>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -182,11 +183,12 @@ export default function Home() {
                 <img src="/sticker.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Happy Users</h5>
-                  {userCount > 0 ? (
+                  <h5 className="card-title">12000+</h5>
+                  {/* {userCount > 0 ? (
                     <h5 className="card-title">{userCount}+</h5>
                   ) : (
                     <h5 className="card-title">0</h5>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -195,7 +197,7 @@ export default function Home() {
                 <img src="/team.png" className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Members</h5>
-                  <h5 className="card-title">322+</h5>
+                  <h5 className="card-title">100+</h5>
                 </div>
               </div>
             </div>
@@ -462,7 +464,7 @@ export default function Home() {
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6">
               <h2>Search For Alerts</h2>
-              <p className='text-2'>Improve your dating experience through personalized alerts. Customize your search based on location and warning labels encompassing harassment, physical abuse, deceit, and other crucial factors. Specify preferences such as gender, ethnicity, age, and dating timeline to create a safety net. Take control of your safety by setting personalized alerts aligned with your dating preferences, ensuring protection against possible concerns in relationships.</p>
+              <p className='text-2'>Improve your dating experience through personalized alerts. Customize your search based on location and warning labels such as harassment, physical abuse, deceit, and other crucial factors. Specify preferences such as gender, ethnicity, age, and dating timeline. Keep yourself safe and help others to be safe as well! We all know that past behavior is a predictor of future behavior and now you can stay away from and alert others to people who have caused more harm than good! Add Alerts and View Alerts for the protection of others and yourself! The person you give your heart too should deserve it!</p>
               <button className='btn-3' data-bs-toggle="modal" data-bs-target="#signupModal">Join Now</button>
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6">
@@ -470,7 +472,7 @@ export default function Home() {
                 <div className="col-md-12">
                   <select className="form-select" name="country" onChange={handleInput}>
                     <option>Country</option>
-                    <option value="US">US</option>
+                    <option value="USA">USA</option>
                     <option value="UK">UK</option>
                     <option value="Russia">Russia</option>
                     <option value="Canada">Canada</option>
@@ -487,6 +489,20 @@ export default function Home() {
                     <option value="Play Boy/Girl">Play Boy/Girl</option>
                     <option value="Gold Digger">Gold Digger</option>
                     <option value="Toxic">Toxic</option>
+                    <option value="Control and Possessiveness">Control and Possessiveness</option>
+                    <option value="Isolation">Isolation</option>
+                    <option value="Verbal and Emotional Abuse">Verbal and Emotional Abuse</option>
+                    <option value="Physical/Mental Abuse">Physical/Mental Abuse</option>
+                    <option value="Financial Control">Financial Control</option>
+                    <option value="Narcissism">Narcissism</option>
+                    <option value="Infidelity and Betrayal">Infidelity and Betrayal</option>
+                    <option value="Manipulation and Deception">Manipulation and Deception</option>
+                    <option value="Stonewalling">Stonewalling</option>
+                    <option value="Jealousy and Insecurity">Jealousy and Insecurity</option>
+                    <option value="Lack of Respect">Lack of Respect</option>
+                    <option value="Addiction and Substance Abuse">Addiction and Substance Abuse</option>
+                    <option value="Passive-Aggressive Behavior">Passive-Aggressive Behavior</option>
+                    <option value="Dependence and Co-Dependence">Dependence and Co-Dependence</option>
                   </select>
                 </div>
                 <div className="col-6">

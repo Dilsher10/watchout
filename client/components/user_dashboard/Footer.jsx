@@ -6,7 +6,7 @@ import { GoArrowUp } from "react-icons/go";
 const Footer = () => {
     return (
         <>
-            <div className="container-fluid pt-4 px-4">
+            <div className="container-fluid pt-4 px-5">
                 <div className="bg-light rounded-top p-4">
                     <div className="row">
                         <div className="col-12 text-center">

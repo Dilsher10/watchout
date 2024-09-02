@@ -1,16 +1,18 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Sidebar from '../../../../components/admin/Sidebar';
 import Navbar from '../../../../components/admin/Navbar';
 import Footer from '../../../../components/admin/Footer';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import JoditEditor from 'jodit-react';
 
 const Page = () => {
 
     const [image, setImage] = useState('')
     const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
+    const editor = useRef(null);
+    const [content, setContent] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,7 +20,7 @@ const Page = () => {
             const formData = new FormData();
             formData.append("image", image);
             formData.append("title", title);
-            formData.append("description", description);
+            formData.append("content", content);
             axios.post(process.env.NEXT_PUBLIC_API_URL + "/api/auth/admin/add-blog", formData)
                 .then((res) => {
                     if (res.status == 200) {
@@ -33,6 +35,7 @@ const Page = () => {
             toast.error("Something went wrong");
         }
     };
+
 
     return (
         <>
@@ -53,7 +56,11 @@ const Page = () => {
                                 </div>
                                 <div className='mb-4'>
                                     <label htmlFor="" style={{ fontWeight: "600", marginBottom: "10px", fontSize: "18px" }}>Description</label>
-                                    <textarea className='form-control' name="description" rows="15" onChange={(e) => { setDescription(e.target.value) }} required></textarea>
+                                    <JoditEditor
+                                        ref={editor}
+                                        value={content}
+                                        onChange={newContent => setContent(newContent)}
+                                    />
                                 </div>
                                 <div className='mb-4'>
                                     <button type="submit" className='btn btn-primary'>Submit</button>

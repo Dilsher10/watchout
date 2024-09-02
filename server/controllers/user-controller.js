@@ -98,7 +98,7 @@ const login = async (req, res) => {
                 if (password === userExist.password) {
                     const token = await userExist.generateToken();
 
-                    res.status(200).json({ message: "Login Successful", token, userId: userExist._id.toString() });
+                    res.status(200).json({ message: "Login Successful", token, userId: userExist._id.toString(), userName: userExist.fname });
                 } else {
                     res.status(401).json({ error: "Invalid Password" });
                 }
@@ -216,5 +216,19 @@ const read = async (req, res) => {
 
 
 
+// Read All Users
 
-module.exports = { register, login, forgotPassword, resetPassword, verifyAccount, read }
+const readSingleUser = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await User.find({ _id: id });
+        res.send(user);
+    } catch (error) {
+        res.status(500).json("internal server errorr");
+    }
+};
+
+
+
+
+module.exports = { register, login, forgotPassword, resetPassword, verifyAccount, read, readSingleUser }

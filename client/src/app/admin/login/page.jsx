@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const URL = process.env.NEXT_PUBLIC_API_URL + "/api/auth/admin/login";
 
@@ -27,7 +28,6 @@ const Page = () => {
 
     // On Submit
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -39,19 +39,18 @@ const Page = () => {
                 body:JSON.stringify(user)
             });
 
-            console.log("login form", response);
-
             if(response.ok){
-                alert("Login Successfully");
+                toast.success("Login Successfully");
                 const res_data = await response.json();
                 localStorage.setItem("token", res_data.token);
+                localStorage.setItem("adminId", res_data.adminId);
+                localStorage.setItem("adminName", res_data.adminName);
 
                 setUser({email: "", password: ""});
                 window.location.href = '/admin';
             }
             else{
-                alert("Invalid Input");
-                console.log("Invalid Input");
+                toast.error("Invalid Input");
             }
         } catch (error) {
             console.log(error);
@@ -82,7 +81,7 @@ const Page = () => {
                                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                         <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                                     </div>
-                                    <Link href="#">Forgot Password</Link>
+                                    <Link href="/admin/forgot-password">Forgot Password</Link>
                                 </div>
                                 <button type="submit" className="btn login-btn">Log In</button>
                             </div>

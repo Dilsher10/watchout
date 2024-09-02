@@ -36,8 +36,8 @@ const Sidebar = () => {
           </div>
           <div className="navbar-nav w-100">
             <Link href="/admin" className="nav-item nav-link"><div className="iconBox"><FaTachometerAlt className='sidebarIcon' /></div><span>Dashboard</span></Link>
-            <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaLaptop className='sidebarIcon' /></div><span>User Management</span></Link>
-            <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>Post Management</span></Link>
+            <Link href="/admin/user-management" className="nav-item nav-link"><div className="iconBox"><FaLaptop className='sidebarIcon' /></div><span>User Management</span></Link>
+            <Link href="/admin/post-management" className="nav-item nav-link"><div className="iconBox"><FaTh className='sidebarIcon' /></div><span>Post Management</span></Link>
             <Link href="/admin/subscription_management" className="nav-item nav-link"><div className="iconBox"><FaKeyboard className='sidebarIcon' /></div><span>Subcription Management</span></Link>
             <Link href="#" className="nav-item nav-link"><div className="iconBox"><FaTable className='sidebarIcon' /></div><span>Static Content Management</span></Link>
             <Link href="/admin/reviews" className="nav-item nav-link"><div className="iconBox"><FaEdit className='sidebarIcon' /></div><span>Reviews</span></Link>
