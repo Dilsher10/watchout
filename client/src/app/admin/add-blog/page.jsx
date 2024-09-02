@@ -25,6 +25,9 @@ const Page = () => {
                 .then((res) => {
                     if (res.status == 200) {
                         toast.success("Blog Added Successfully");
+                        setImage('');
+                        setTitle('');
+                        setContent('');
                         window.location.href = '/admin/add-blog';
                     }
                 })
@@ -45,7 +48,7 @@ const Page = () => {
                     <Navbar />
                     <div className="col-sm-12 col-xl-12">
                         <div className="bg-light rounded h-100 p-4">
-                            <form enctype="multipart/form-data" onSubmit={handleSubmit}>
+                            <form encType="multipart/form-data" onSubmit={handleSubmit}>
                                 <div className='mb-4'>
                                     <label htmlFor="" style={{ fontWeight: "600", marginBottom: "10px", fontSize: "18px" }}>Image</label>
                                     <input type="file" className='form-control' name="image" accept="image/*" onChange={(e) => setImage(e.target.files[0])} required />
