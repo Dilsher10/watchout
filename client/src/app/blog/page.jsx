@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import axios from 'axios';
-import Link from 'next/link'
+import Link from 'next/link';
 
 
 const stripHtml = (html) => {
