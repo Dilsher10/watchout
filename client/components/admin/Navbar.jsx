@@ -1,17 +1,27 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify'
 
 const Navbar = () => {
 
+    const [adminName, setAdminName] = useState('');
+    const router = useRouter();
+
     useEffect(() => {
-        if (!localStorage.getItem('adminId')) {
-            redirect('/admin/login');
+        if (typeof window !== 'undefined') {
+            const storedAdminId = localStorage.getItem('adminId');
+            const storedAdminName = localStorage.getItem('adminName');
+
+            if (!storedAdminId) {
+                router.push('/admin/login');
+            } else {
+                setAdminName(storedAdminName);
+            }
         }
-    }, []);
+    }, [router]);
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -29,7 +39,7 @@ const Navbar = () => {
                         <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <Image className="rounded-circle me-lg-2" src="/admin/user.jpg" alt="" width={40} height={40} />
                             <span className="d-none d-lg-inline-flex">
-                                {localStorage.getItem('adminName')?.charAt(0).toUpperCase() + localStorage.getItem('adminName')?.slice(1)}
+                                {adminName && adminName.charAt(0).toUpperCase() + adminName.slice(1)}
                             </span>
 
                         </Link>
